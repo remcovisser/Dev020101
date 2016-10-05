@@ -87,12 +87,6 @@ namespace Dev020101.ORM
 
             foreach(FieldInfo field in fields)
             {
-                // Filter out the connection field, needs a fix
-                if (field.Equals(fields.Last()))
-                {
-                    break;
-                }
-
                 // Skip id field
                 if (!field.Equals(fields.First()))
                 {

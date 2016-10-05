@@ -20,7 +20,7 @@ namespace Dev020101.Interfaces
 
         // Methods
         bool save();
-        bool update();
+        bool update(string field = null);
         bool delete();
         int count();
         int sum(string value);

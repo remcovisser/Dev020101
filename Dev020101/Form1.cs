@@ -23,8 +23,8 @@ namespace Dev020101
         // Switch active control
         private void changeControl(Control Control)
         {
-            this.activeView.Controls.Clear();
-            this.activeView.Controls.Add(Control);
+            activeView.Controls.Clear();
+            activeView.Controls.Add(Control);
         }
 
         // Home button

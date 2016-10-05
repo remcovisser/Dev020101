@@ -224,7 +224,7 @@ namespace Dev020101.ORM
             return sum;
         }
 
-        public bool update()
+        public bool update(string field = null)
         {
             List<Tuple<string, object>> formatedData = baseModel.saveOrUpdate(this, table);
             query = "update " + table + " set ";
@@ -236,7 +236,16 @@ namespace Dev020101.ORM
             }
             fieldsAndData = fieldsAndData.Remove(fieldsAndData.Length - 1);
 
-            query += fieldsAndData + " where id = " + this.GetType().GetFields().First().GetValue(this);
+            if(field == null)
+            {
+                query += fieldsAndData + " where id = ";
+            }
+            else
+            {
+                query += fieldsAndData + " where " + field + " = ";
+            }
+
+            query += this.GetType().GetFields().First().GetValue(this);
             MySqlCommand command = new MySqlCommand(query, connection);
             command.ExecuteNonQuery();
 

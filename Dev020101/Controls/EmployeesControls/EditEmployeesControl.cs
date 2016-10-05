@@ -14,15 +14,27 @@ namespace Dev020101.Controls.EmployeesControls
 {
     public partial class EditEmployeesControl : UserControl
     {
+        Employees currentEmployee;
+
+        // Load the data in the view
         public EditEmployeesControl(Employees selectedEmployee)
         {
             InitializeComponent();
-            button1.Text = selectedEmployee.fullname();
+
+            currentEmployee = selectedEmployee;
+            bsnTextbox.Text = selectedEmployee.bsn.ToString();
+            firstnameTextbox.Text = selectedEmployee.firstName;
+            lastnameTextbox.Text = selectedEmployee.lastName;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        // Save the updated user
+        private void saveButton_Click(object sender, EventArgs e)
         {
-
+            Employees updatedEmployee = new Employees();
+            updatedEmployee.bsn = currentEmployee.bsn;
+            updatedEmployee.firstName = firstnameTextbox.Text;
+            updatedEmployee.lastName = lastnameTextbox.Text;
+            updatedEmployee.update("bsn");
         }
     }
 }
