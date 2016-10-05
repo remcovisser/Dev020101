@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,16 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Employees\AddEmployeeControl.cs">
+    <Compile Include="Controls\EmployeesControls\AddEmployeesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Employees\AddEmployeeControl.Designer.cs">
-      <DependentUpon>AddEmployeeControl.cs</DependentUpon>
+    <Compile Include="Controls\EmployeesControls\AddEmployeesControl.Designer.cs">
+      <DependentUpon>AddEmployeesControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Employees\ViewEmployeesControl.cs">
+    <Compile Include="Controls\EmployeesControls\ViewEmployeesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\Employees\ViewEmployeesControl.Designer.cs">
+    <Compile Include="Controls\EmployeesControls\ViewEmployeesControl.Designer.cs">
       <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -64,14 +68,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IModel.cs" />
+    <Compile Include="Models\Employees.cs" />
+    <Compile Include="ORM\Database.cs" />
+    <Compile Include="ORM\Model.cs" />
+    <Compile Include="ORM\MongoModel.cs" />
+    <Compile Include="ORM\MySqlModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\Employees\AddEmployeeControl.resx">
-      <DependentUpon>AddEmployeeControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\Employees\ViewEmployeesControl.resx">
-      <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +88,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

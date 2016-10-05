@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dev020101.Controls.Employees
+namespace Dev020101.Controls.EmployeesControls
 {
-    public partial class ViewEmployeesControl : UserControl
+    public partial class AddEmployeesControl : UserControl
     {
-        public ViewEmployeesControl()
+        public AddEmployeesControl()
         {
             InitializeComponent();
         }

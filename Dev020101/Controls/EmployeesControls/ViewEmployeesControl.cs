@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Dev020101.Controls.Employees
+using Dev020101.Models;
+
+namespace Dev020101.Controls.EmployeesControls
 {
-    public partial class AddEmployeeControl : UserControl
+    public partial class ViewEmployeesControl : UserControl
     {
-        public AddEmployeeControl()
+        public ViewEmployeesControl()
         {
             InitializeComponent();
+
+            List<Employees> users = new Employees().get();
+
         }
     }
 }

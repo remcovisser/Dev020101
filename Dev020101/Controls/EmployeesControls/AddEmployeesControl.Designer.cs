@@ -1,6 +1,6 @@
-﻿namespace Dev020101.Controls.Employees
+﻿namespace Dev020101.Controls.EmployeesControls
 {
-    partial class AddEmployeeControl
+    partial class AddEmployeesControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,31 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Add employee";
-            // 
-            // AddEmployeeControl
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Name = "AddEmployeeControl";
-            this.Size = new System.Drawing.Size(1262, 743);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

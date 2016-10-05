@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Dev020101.Controls.Employees;
+using Dev020101.Controls.EmployeesControls;
 
 namespace Dev020101
 {
@@ -43,7 +43,7 @@ namespace Dev020101
         // Add employee
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            changeControl(new AddEmployeeControl());
+            changeControl(new AddEmployeesControl());
         }
 
     }
