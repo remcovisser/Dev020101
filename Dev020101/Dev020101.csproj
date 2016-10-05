@@ -82,6 +82,9 @@
     <Compile Include="ORM\MySqlModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\EmployeesControls\AddEmployeesControl.resx">
+      <DependentUpon>AddEmployeesControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\EmployeesControls\EditEmployeesControl.resx">
       <DependentUpon>EditEmployeesControl.cs</DependentUpon>
     </EmbeddedResource>
