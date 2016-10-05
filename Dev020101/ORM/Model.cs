@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Dev020101.ORM
 {
-    class Model<T>
+    public class Model<T>
     {
         public MySqlConnection MySqlconnection { get; set; }
         public Model()

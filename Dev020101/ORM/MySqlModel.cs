@@ -10,7 +10,7 @@ using Dev020101.Models;
 
 namespace Dev020101.ORM
 {
-    class MySqlModel<T> : Model<T>, IModel<T, MySqlModel<T>>
+    public class MySqlModel<T> : Model<T>, IModel<T, MySqlModel<T>>
     {
         MySqlConnection connection;
         Model<T> baseModel;
@@ -48,9 +48,16 @@ namespace Dev020101.ORM
             return true;
         }
 
-        public MySqlModel<T> find<U>(U value)
+        public MySqlModel<T> find<U>(U value, string field = null)
         {
-            query += " where id = " + value;
+            if (field == null)
+            {
+                query += " where id = " + value;
+            } 
+            else
+            {
+                query += " where " + field + " = " + value;
+            }
 
             return this;
         }

@@ -1,6 +1,6 @@
 ﻿namespace Dev020101.Controls.EmployeesControls
 {
-    partial class ViewEmployeesControl
+    partial class EditEmployeesControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EmployeesList = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // EmployeesList
+            // button1
             // 
-            this.EmployeesList.FormattingEnabled = true;
-            this.EmployeesList.ItemHeight = 16;
-            this.EmployeesList.Location = new System.Drawing.Point(0, 0);
-            this.EmployeesList.Name = "EmployeesList";
-            this.EmployeesList.Size = new System.Drawing.Size(1262, 740);
-            this.EmployeesList.TabIndex = 1;
-            this.EmployeesList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.EmployeesList_MouseDoubleClick);
+            this.button1.Location = new System.Drawing.Point(186, 213);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(301, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ViewEmployeesControl
+            // EditEmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.EmployeesList);
-            this.Name = "ViewEmployeesControl";
-            this.Size = new System.Drawing.Size(1262, 743);
+            this.Controls.Add(this.button1);
+            this.Name = "EditEmployeesControl";
+            this.Size = new System.Drawing.Size(1262, 740);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox EmployeesList;
+
+        private System.Windows.Forms.Button button1;
     }
 }

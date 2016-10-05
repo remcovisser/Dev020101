@@ -27,7 +27,7 @@ namespace Dev020101.Interfaces
         O grab();
         List<O> get();
         T select(string fields);
-        T find<U>(U value);
+        T find<U>(U value, string field = null);
         T first();
         T logicalOperatorBuilder(string logicalOperator, string field, string comparisonOperator, object value);
         T where(string field, string comparisonOperator, object value);
