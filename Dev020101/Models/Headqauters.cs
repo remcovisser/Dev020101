@@ -8,9 +8,10 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Schools
+    class Headqauters
     {
-        public int school_id;
-        public string name;
+        public string buildingName;
+        public int rooms;
+        public float rent;
     }
 }

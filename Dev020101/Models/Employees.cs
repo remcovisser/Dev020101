@@ -13,6 +13,7 @@ namespace Dev020101.Models
         public int bsn;
         public string firstName;
         public string lastName;
+        public string buildingName;
 
         // Helper methods
         public string fullname()

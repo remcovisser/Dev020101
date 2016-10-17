@@ -8,9 +8,9 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Schools
+    class Countries
     {
-        public int school_id;
+        public int country_id;
         public string name;
     }
 }

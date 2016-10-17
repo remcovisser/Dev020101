@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 using Dev020101.ORM;
 
+
 namespace Dev020101.Models
 {
-    class Schools
+    class Levels
     {
-        public int school_id;
+        public int level_id;
         public string name;
     }
 }

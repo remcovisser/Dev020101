@@ -8,9 +8,10 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Schools
+    class EmployeePositions
     {
-        public int school_id;
-        public string name;
+        public int bsn;
+        public int position_id;
+        public int project_id;
     }
 }

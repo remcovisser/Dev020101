@@ -75,7 +75,18 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IModel.cs" />
+    <Compile Include="Models\Addresses.cs" />
+    <Compile Include="Models\Cities.cs" />
+    <Compile Include="Models\Countries.cs" />
+    <Compile Include="Models\Courses.cs" />
+    <Compile Include="Models\EmployeeDegrees.cs" />
+    <Compile Include="Models\EmployeePositions.cs" />
     <Compile Include="Models\Employees.cs" />
+    <Compile Include="Models\Headqauters.cs" />
+    <Compile Include="Models\Levels.cs" />
+    <Compile Include="Models\Positions.cs" />
+    <Compile Include="Models\Projects.cs" />
+    <Compile Include="Models\Schools.cs" />
     <Compile Include="ORM\Database.cs" />
     <Compile Include="ORM\Model.cs" />
     <Compile Include="ORM\MongoModel.cs" />
@@ -114,11 +125,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\DatabaseDesign.asta" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\DatabaseDesign.png" />
+    <Content Include="Resources\DatabaseDesign.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
