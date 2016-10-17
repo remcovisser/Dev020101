@@ -68,6 +68,24 @@
     <Compile Include="Controls\EmployeesControls\ViewEmployeesControl.Designer.cs">
       <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\HeadquartersControls\AddHeadquartersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HeadquartersControls\AddHeadquartersControl.Designer.cs">
+      <DependentUpon>AddHeadquartersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HeadquartersControls\EditHeadquartersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HeadquartersControls\EditHeadquartersControl.Designer.cs">
+      <DependentUpon>EditHeadquartersControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HeadquartersControls\ViewHeadquartersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HeadquartersControls\ViewHeadquartersControl.Designer.cs">
+      <DependentUpon>ViewHeadquartersControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +120,15 @@
     <EmbeddedResource Include="Controls\EmployeesControls\ViewEmployeesControl.resx">
       <DependentUpon>ViewEmployeesControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HeadquartersControls\AddHeadquartersControl.resx">
+      <DependentUpon>AddHeadquartersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HeadquartersControls\EditHeadquartersControl.resx">
+      <DependentUpon>EditHeadquartersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HeadquartersControls\ViewHeadquartersControl.resx">
+      <DependentUpon>ViewHeadquartersControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +141,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\Dev020101.Models.Employees.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

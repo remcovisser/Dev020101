@@ -8,7 +8,7 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Headquarters : MySqlModel<Headquarters>
+    public class Headquarters : MySqlModel<Headquarters>
     {
         public string buildingName;
         public int rooms;

@@ -66,11 +66,11 @@ namespace Dev020101.ORM
         {
             if (field == null)
             {
-                query += " where id = " + value;
+                query += " where id = '" + value + "'";
             } 
             else
             {
-                query += " where " + field + " = " + value;
+                query += " where " + field + " = '" + value + "'";
             }
 
             return this;

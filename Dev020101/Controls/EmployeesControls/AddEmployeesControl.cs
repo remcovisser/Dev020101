@@ -38,6 +38,7 @@ namespace Dev020101.Controls.EmployeesControls
             return false;
         }
 
+        // Save the new user
         private void SaveButtom_Click(object sender, EventArgs e)
         {
             if (employeeUnique(bsnTextbox.Text))

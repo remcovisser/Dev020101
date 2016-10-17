@@ -35,6 +35,9 @@
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activeView = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.headquartersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewHeadquartersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addHeadquartersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.activeView.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +47,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.employeesToolStripMenuItem});
+            this.employeesToolStripMenuItem,
+            this.headquartersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1262, 28);
@@ -100,6 +104,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Assignment 1 - 0908443 - Remco Visser - INF2A";
             // 
+            // headquartersToolStripMenuItem
+            // 
+            this.headquartersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewHeadquartersToolStripMenuItem,
+            this.addHeadquartersToolStripMenuItem});
+            this.headquartersToolStripMenuItem.Name = "headquartersToolStripMenuItem";
+            this.headquartersToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
+            this.headquartersToolStripMenuItem.Text = "Headquarters";
+            // 
+            // viewHeadquartersToolStripMenuItem
+            // 
+            this.viewHeadquartersToolStripMenuItem.Name = "viewHeadquartersToolStripMenuItem";
+            this.viewHeadquartersToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.viewHeadquartersToolStripMenuItem.Text = "View headquarters";
+            this.viewHeadquartersToolStripMenuItem.Click += new System.EventHandler(this.viewHeadquartersToolStripMenuItem_Click);
+            // 
+            // addHeadquartersToolStripMenuItem
+            // 
+            this.addHeadquartersToolStripMenuItem.Name = "addHeadquartersToolStripMenuItem";
+            this.addHeadquartersToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.addHeadquartersToolStripMenuItem.Text = "Add headquarters";
+            this.addHeadquartersToolStripMenuItem.Click += new System.EventHandler(this.addHeadquartersToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -128,6 +155,9 @@
         private System.Windows.Forms.ToolStripMenuItem addEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewEmployeesToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem headquartersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewHeadquartersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addHeadquartersToolStripMenuItem;
     }
 }
 

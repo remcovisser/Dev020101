@@ -90,7 +90,7 @@
             // 
             // SaveButtom
             // 
-            this.SaveButtom.Location = new System.Drawing.Point(110, 670);
+            this.SaveButtom.Location = new System.Drawing.Point(110, 629);
             this.SaveButtom.Name = "SaveButtom";
             this.SaveButtom.Size = new System.Drawing.Size(150, 23);
             this.SaveButtom.TabIndex = 5;
@@ -101,7 +101,7 @@
             // feedbackLabel
             // 
             this.feedbackLabel.AutoSize = true;
-            this.feedbackLabel.Location = new System.Drawing.Point(107, 627);
+            this.feedbackLabel.Location = new System.Drawing.Point(107, 586);
             this.feedbackLabel.Name = "feedbackLabel";
             this.feedbackLabel.Size = new System.Drawing.Size(0, 17);
             this.feedbackLabel.TabIndex = 14;

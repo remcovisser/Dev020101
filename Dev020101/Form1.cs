@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Dev020101.Controls.EmployeesControls;
+using Dev020101.Controls.HeadquartersControls;
 
 namespace Dev020101
 {
@@ -34,17 +35,26 @@ namespace Dev020101
         }
 
         // Employees overview
-
         private void viewEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             changeControl(new ViewEmployeesControl());
         }
-
         // Add employee
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             changeControl(new AddEmployeesControl());
         }
 
+
+        // Headquarters overview
+        private void viewHeadquartersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewHeadquartersControl());
+        }
+        // Add Headquarters
+        private void addHeadquartersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddHeadquartersControl());
+        }
     }
 }
