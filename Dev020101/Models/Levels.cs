@@ -8,7 +8,7 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Levels : MySqlModel<Levels>
+    public class Levels : MySqlModel<Levels>
     {
         public int level_id;
         public string name;

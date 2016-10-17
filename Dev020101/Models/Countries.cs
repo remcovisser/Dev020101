@@ -8,7 +8,7 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Countries : MySqlModel<Countries>
+    public class Countries : MySqlModel<Countries>
     {
         public int country_id;
         public string name;
