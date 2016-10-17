@@ -50,6 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\CitiesControls\AddCitiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CitiesControls\AddCitiesControl.Designer.cs">
+      <DependentUpon>AddCitiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CitiesControls\EditCitiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CitiesControls\EditCitiesControl.Designer.cs">
+      <DependentUpon>EditCitiesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CitiesControls\ViewCitiesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CitiesControls\ViewCitiesControl.Designer.cs">
+      <DependentUpon>ViewCitiesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\EmployeesControls\AddEmployeesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +129,15 @@
     <Compile Include="ORM\MySqlModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\CitiesControls\AddCitiesControl.resx">
+      <DependentUpon>AddCitiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CitiesControls\EditCitiesControl.resx">
+      <DependentUpon>EditCitiesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CitiesControls\ViewCitiesControl.resx">
+      <DependentUpon>ViewCitiesControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\EmployeesControls\AddEmployeesControl.resx">
       <DependentUpon>AddEmployeesControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +186,16 @@
   <ItemGroup>
     <Content Include="Resources\DatabaseDesign.png" />
     <Content Include="Resources\DatabaseDesign.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\AddressesControls\" />
+    <Folder Include="Controls\CountriesControls\" />
+    <Folder Include="Controls\CoursesControls\" />
+    <Folder Include="Controls\DegreesControls\" />
+    <Folder Include="Controls\LevelsControls\" />
+    <Folder Include="Controls\PositionsControls\" />
+    <Folder Include="Controls\ProjectsControls\" />
+    <Folder Include="Controls\SchoolsControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

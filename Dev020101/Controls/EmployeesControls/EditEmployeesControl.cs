@@ -37,18 +37,36 @@ namespace Dev020101.Controls.EmployeesControls
             headquartersComboBox.SelectedText = currentEmployee.buildingName;
         }
 
+        // Check if there is an employee with the given BSN
+        private bool employeeUnique(string bsn)
+        {
+            if (new Employees().find(bsn, "bsn").count() == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         // Save the current updated user
         private void saveButton_Click(object sender, EventArgs e)
         {
-            Employees updatedEmployee = new Employees();
-            updatedEmployee.bsn = bsnTextbox.Text;
-            updatedEmployee.firstName = firstnameTextbox.Text;
-            updatedEmployee.lastName = lastnameTextbox.Text;
-            updatedEmployee.buildingName = headquartersComboBox.Text;
-            updatedEmployee.update("bsn", currentEmployee.bsn);
+            if (employeeUnique(bsnTextbox.Text))
+            {
+                Employees updatedEmployee = new Employees();
+                updatedEmployee.bsn = bsnTextbox.Text;
+                updatedEmployee.firstName = firstnameTextbox.Text;
+                updatedEmployee.lastName = lastnameTextbox.Text;
+                updatedEmployee.buildingName = headquartersComboBox.Text;
+                updatedEmployee.update("bsn", currentEmployee.bsn);
 
-            feedbackLabel.Text = "The employee has been updated";
-            feedbackLabel.ForeColor = System.Drawing.Color.Green;
+                feedbackLabel.Text = "The employee has been updated";
+                feedbackLabel.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                feedbackLabel.Text = "There is already an employee with that BSN";
+                feedbackLabel.ForeColor = System.Drawing.Color.Red;
+            }
         }
 
         // Delete the current user

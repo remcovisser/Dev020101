@@ -10,7 +10,6 @@ namespace Dev020101.Models
 {
     public class Courses : MySqlModel<Courses>
     {
-        public int course_id;
-        public string name;
+        public string course_name;
     }
 }

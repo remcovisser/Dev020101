@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using Dev020101.Controls.EmployeesControls;
 using Dev020101.Controls.HeadquartersControls;
+using Dev020101.Controls.CitiesControls;
 
 namespace Dev020101
 {
@@ -55,6 +56,17 @@ namespace Dev020101
         private void addHeadquartersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             changeControl(new AddHeadquartersControl());
+        }
+
+        // Cities overview
+        private void viewCitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewCitiesControl());
+        }
+        // Add cities
+        private void addCitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddCitiesControl());
         }
     }
 }

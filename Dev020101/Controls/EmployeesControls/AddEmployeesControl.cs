@@ -52,7 +52,6 @@ namespace Dev020101.Controls.EmployeesControls
 
                 feedbackLabel.Text = "The employee has been created";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
-
             }
             else
             {

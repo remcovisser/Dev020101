@@ -10,7 +10,6 @@ namespace Dev020101.Models
 {
     public class Levels : MySqlModel<Levels>
     {
-        public int level_id;
-        public string name;
+        public string level_name;
     }
 }

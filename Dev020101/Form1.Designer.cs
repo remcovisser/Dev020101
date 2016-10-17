@@ -39,6 +39,7 @@
             this.projectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.failingProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,7 +66,6 @@
             this.addPositionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activeView = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.failingProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.activeView.SuspendLayout();
             this.SuspendLayout();
@@ -153,14 +153,20 @@
             // viewProjectsToolStripMenuItem
             // 
             this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
-            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.viewProjectsToolStripMenuItem.Text = "View projects";
             // 
             // addProjectsToolStripMenuItem
             // 
             this.addProjectsToolStripMenuItem.Name = "addProjectsToolStripMenuItem";
-            this.addProjectsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.addProjectsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.addProjectsToolStripMenuItem.Text = "Add projects";
+            // 
+            // failingProjectsToolStripMenuItem
+            // 
+            this.failingProjectsToolStripMenuItem.Name = "failingProjectsToolStripMenuItem";
+            this.failingProjectsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.failingProjectsToolStripMenuItem.Text = "Failing projects";
             // 
             // addressesToolStripMenuItem
             // 
@@ -218,14 +224,16 @@
             // viewCitiesToolStripMenuItem
             // 
             this.viewCitiesToolStripMenuItem.Name = "viewCitiesToolStripMenuItem";
-            this.viewCitiesToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.viewCitiesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.viewCitiesToolStripMenuItem.Text = "View cities";
+            this.viewCitiesToolStripMenuItem.Click += new System.EventHandler(this.viewCitiesToolStripMenuItem_Click);
             // 
             // addCitiesToolStripMenuItem
             // 
             this.addCitiesToolStripMenuItem.Name = "addCitiesToolStripMenuItem";
-            this.addCitiesToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.addCitiesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.addCitiesToolStripMenuItem.Text = "Add cities";
+            this.addCitiesToolStripMenuItem.Click += new System.EventHandler(this.addCitiesToolStripMenuItem_Click);
             // 
             // degreesToolStripMenuItem
             // 
@@ -242,13 +250,13 @@
             // viewDegreesToolStripMenuItem
             // 
             this.viewDegreesToolStripMenuItem.Name = "viewDegreesToolStripMenuItem";
-            this.viewDegreesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewDegreesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.viewDegreesToolStripMenuItem.Text = "View degrees";
             // 
             // addDegreesToolStripMenuItem
             // 
             this.addDegreesToolStripMenuItem.Name = "addDegreesToolStripMenuItem";
-            this.addDegreesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addDegreesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.addDegreesToolStripMenuItem.Text = "Add degrees";
             // 
             // levelsToolStripMenuItem
@@ -257,7 +265,7 @@
             this.viewLevelsToolStripMenuItem,
             this.addLevelsToolStripMenuItem});
             this.levelsToolStripMenuItem.Name = "levelsToolStripMenuItem";
-            this.levelsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.levelsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.levelsToolStripMenuItem.Text = "Levels";
             // 
             // viewLevelsToolStripMenuItem
@@ -278,7 +286,7 @@
             this.viewCoursesToolStripMenuItem,
             this.addCoursesToolStripMenuItem});
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
-            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.coursesToolStripMenuItem.Text = "Courses";
             // 
             // viewCoursesToolStripMenuItem
@@ -299,7 +307,7 @@
             this.viewSchoolsToolStripMenuItem,
             this.addSchoolsToolStripMenuItem});
             this.schoolsToolStripMenuItem.Name = "schoolsToolStripMenuItem";
-            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.schoolsToolStripMenuItem.Text = "Schools";
             // 
             // viewSchoolsToolStripMenuItem
@@ -326,13 +334,13 @@
             // viewPositionsToolStripMenuItem
             // 
             this.viewPositionsToolStripMenuItem.Name = "viewPositionsToolStripMenuItem";
-            this.viewPositionsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewPositionsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.viewPositionsToolStripMenuItem.Text = "View positions";
             // 
             // addPositionsToolStripMenuItem
             // 
             this.addPositionsToolStripMenuItem.Name = "addPositionsToolStripMenuItem";
-            this.addPositionsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addPositionsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.addPositionsToolStripMenuItem.Text = "Add positions";
             // 
             // activeView
@@ -353,12 +361,6 @@
             this.label1.Size = new System.Drawing.Size(1165, 355);
             this.label1.TabIndex = 0;
             this.label1.Text = "Assignment 1 - 0908443 - Remco Visser - INF2A";
-            // 
-            // failingProjectsToolStripMenuItem
-            // 
-            this.failingProjectsToolStripMenuItem.Name = "failingProjectsToolStripMenuItem";
-            this.failingProjectsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.failingProjectsToolStripMenuItem.Text = "Failing projects";
             // 
             // Form1
             // 
