@@ -59,6 +59,8 @@ namespace Dev020101.Controls.EmployeesControls
                 updatedEmployee.buildingName = headquartersComboBox.Text;
                 updatedEmployee.update("bsn", currentEmployee.bsn);
 
+                currentEmployee = updatedEmployee;
+
                 feedbackLabel.Text = "The employee has been updated";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
             }

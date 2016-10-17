@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 using Dev020101.Models;
 
-namespace Dev020101.Controls.CitiesControls
+namespace Dev020101.Controls.LevelsControls
 {
-    public partial class AddCitiesControl : UserControl
+    public partial class AddLevelsControl : UserControl
     {
-        public AddCitiesControl()
+        public AddLevelsControl()
         {
             InitializeComponent();
         }
 
-        // Check if there is a city with the given name
-        private bool cityUnique(string name)
+        // Check if there is a level with the given name
+        private bool levelsUnique(string name)
         {
-            if (new Cities().find(name, "city_name").count() == 0)
+            if (new Levels().find(name, "level_name").count() == 0)
             {
                 return true;
             }
@@ -31,18 +31,18 @@ namespace Dev020101.Controls.CitiesControls
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            if (cityUnique(nameTextbox.Text))
+            if (levelsUnique(nameTextbox.Text))
             {
-                Cities newCity = new Cities();
-                newCity.city_name = nameTextbox.Text;
-                newCity.save();
+                Levels newLevel = new Levels();
+                newLevel.level_name = nameTextbox.Text;
+                newLevel.save();
 
-                feedbackLabel.Text = "The city has been created";
+                feedbackLabel.Text = "The level has been created";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                feedbackLabel.Text = "There is already a city with that name";
+                feedbackLabel.Text = "There is already a level with that name";
                 feedbackLabel.ForeColor = System.Drawing.Color.Red;
             }
         }

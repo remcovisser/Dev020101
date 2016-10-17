@@ -25,7 +25,7 @@ namespace Dev020101.Controls.CitiesControls
             nameTextbox.Text = selectedCity.city_name;
         }
 
-        // Check if there is an employee with the given BSN
+        // Check if there is a city with the given name
         private bool cityUnique(string name)
         {
             if (new Cities().find(name, "city_name").count() == 0)
@@ -44,12 +44,14 @@ namespace Dev020101.Controls.CitiesControls
                 updatedCity.city_name = nameTextbox.Text;
                 updatedCity.update("city_name", currentCity.city_name);
 
+                currentCity = updatedCity;
+
                 feedbackLabel.Text = "The city has been created";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                feedbackLabel.Text = "There is already an city with that name";
+                feedbackLabel.Text = "There is already a city with that name";
                 feedbackLabel.ForeColor = System.Drawing.Color.Red;
             }
         }

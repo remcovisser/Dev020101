@@ -11,6 +11,10 @@ using System.Windows.Forms;
 using Dev020101.Controls.EmployeesControls;
 using Dev020101.Controls.HeadquartersControls;
 using Dev020101.Controls.CitiesControls;
+using Dev020101.Controls.CountriesControls;
+using Dev020101.Controls.CoursesControls;
+using Dev020101.Controls.LevelsControls;
+using Dev020101.Controls.SchoolsControls;
 
 namespace Dev020101
 {
@@ -67,6 +71,50 @@ namespace Dev020101
         private void addCitiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             changeControl(new AddCitiesControl());
+        }
+
+        // Cuntries overview
+        private void viewCountriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewCountriesControl());
+        }
+        // Add countries
+        private void addCountriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddCountriesControl());
+        }
+
+        // Levels overview
+        private void viewLevelsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewLevelsControl());
+        }
+        // Add levels
+        private void addLevelsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddLevelsControl());
+        }
+
+        // Courses overview
+        private void viewCoursesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewCoursesControl());
+        }
+        // Add courses
+        private void addCoursesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddCoursesControl());
+        }
+
+        // Schools overview
+        private void viewSchoolsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewSchoolsControl());
+        }
+        // Add schools
+        private void addSchoolsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddSchoolsControl());
         }
     }
 }

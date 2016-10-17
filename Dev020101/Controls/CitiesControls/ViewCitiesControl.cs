@@ -29,7 +29,6 @@ namespace Dev020101.Controls.CitiesControls
             CitiesList.DataSource = dataList;
         }
 
-
         // Switch active control
         private void changeControl(Control Control)
         {

@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 using Dev020101.Models;
 
-namespace Dev020101.Controls.CitiesControls
+namespace Dev020101.Controls.CountriesControls
 {
-    public partial class AddCitiesControl : UserControl
+    public partial class AddCountriesControl : UserControl
     {
-        public AddCitiesControl()
+        public AddCountriesControl()
         {
             InitializeComponent();
         }
 
-        // Check if there is a city with the given name
-        private bool cityUnique(string name)
+        // Check if there is an country with the given BSN
+        private bool countryUnique(string name)
         {
-            if (new Cities().find(name, "city_name").count() == 0)
+            if (new Countries().find(name, "country_name").count() == 0)
             {
                 return true;
             }
@@ -31,18 +31,18 @@ namespace Dev020101.Controls.CitiesControls
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            if (cityUnique(nameTextbox.Text))
+            if (countryUnique(nameTextbox.Text))
             {
-                Cities newCity = new Cities();
-                newCity.city_name = nameTextbox.Text;
-                newCity.save();
+                Countries newCountry = new Countries();
+                newCountry.country_name = nameTextbox.Text;
+                newCountry.save();
 
-                feedbackLabel.Text = "The city has been created";
+                feedbackLabel.Text = "The country has been created";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                feedbackLabel.Text = "There is already a city with that name";
+                feedbackLabel.Text = "There is already an country with that name";
                 feedbackLabel.ForeColor = System.Drawing.Color.Red;
             }
         }

@@ -8,6 +8,15 @@ namespace Dev020101
 {
     static class Program
     {
+        /*
+         * [Done] - After an entity has been updated, the delete methode tries to find the entity with the outdated information
+         * Addresses
+         * Degrees
+         * Positions
+         * Projects
+         * Failing projects
+         * Documentation
+         */
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

@@ -48,6 +48,8 @@ namespace Dev020101.Controls.HeadquartersControls
                 updatedheadquarter.rent = float.Parse(rentTextbox.Text);
                 updatedheadquarter.update("buildingName", currentHeadquarter.buildingName);
 
+                currentHeadquarter = updatedheadquarter;
+
                 feedbackLabel.Text = "The headquarter has been updated";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
             } 

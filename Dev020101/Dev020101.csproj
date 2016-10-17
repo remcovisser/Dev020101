@@ -68,6 +68,42 @@
     <Compile Include="Controls\CitiesControls\ViewCitiesControl.Designer.cs">
       <DependentUpon>ViewCitiesControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CountriesControls\AddCountriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CountriesControls\AddCountriesControl.Designer.cs">
+      <DependentUpon>AddCountriesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CountriesControls\EditCountriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CountriesControls\EditCountriesControl.Designer.cs">
+      <DependentUpon>EditCountriesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CountriesControls\ViewCountriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CountriesControls\ViewCountriesControl.Designer.cs">
+      <DependentUpon>ViewCountriesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoursesControls\AddCoursesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoursesControls\AddCoursesControl.Designer.cs">
+      <DependentUpon>AddCoursesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoursesControls\EditCoursesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoursesControls\EditCoursesControl.Designer.cs">
+      <DependentUpon>EditCoursesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoursesControls\ViewCoursesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoursesControls\ViewCoursesControl.Designer.cs">
+      <DependentUpon>ViewCoursesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\EmployeesControls\AddEmployeesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -104,6 +140,42 @@
     <Compile Include="Controls\HeadquartersControls\ViewHeadquartersControl.Designer.cs">
       <DependentUpon>ViewHeadquartersControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\LevelsControls\AddLevelsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LevelsControls\AddLevelsControl.Designer.cs">
+      <DependentUpon>AddLevelsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LevelsControls\EditLevelsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LevelsControls\EditLevelsControl.Designer.cs">
+      <DependentUpon>EditLevelsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LevelsControls\ViewLevelsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LevelsControls\ViewLevelsControl.Designer.cs">
+      <DependentUpon>ViewLevelsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SchoolsControls\AddSchoolsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SchoolsControls\AddSchoolsControl.Designer.cs">
+      <DependentUpon>AddSchoolsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SchoolsControls\EditSchoolsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SchoolsControls\EditSchoolsControl.Designer.cs">
+      <DependentUpon>EditSchoolsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SchoolsControls\ViewSchoolsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SchoolsControls\ViewSchoolsControl.Designer.cs">
+      <DependentUpon>ViewSchoolsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +210,24 @@
     <EmbeddedResource Include="Controls\CitiesControls\ViewCitiesControl.resx">
       <DependentUpon>ViewCitiesControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CountriesControls\AddCountriesControl.resx">
+      <DependentUpon>AddCountriesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CountriesControls\EditCountriesControl.resx">
+      <DependentUpon>EditCountriesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CountriesControls\ViewCountriesControl.resx">
+      <DependentUpon>ViewCountriesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CoursesControls\AddCoursesControl.resx">
+      <DependentUpon>AddCoursesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CoursesControls\EditCoursesControl.resx">
+      <DependentUpon>EditCoursesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CoursesControls\ViewCoursesControl.resx">
+      <DependentUpon>ViewCoursesControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\EmployeesControls\AddEmployeesControl.resx">
       <DependentUpon>AddEmployeesControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +245,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\HeadquartersControls\ViewHeadquartersControl.resx">
       <DependentUpon>ViewHeadquartersControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LevelsControls\AddLevelsControl.resx">
+      <DependentUpon>AddLevelsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LevelsControls\EditLevelsControl.resx">
+      <DependentUpon>EditLevelsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LevelsControls\ViewLevelsControl.resx">
+      <DependentUpon>ViewLevelsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SchoolsControls\AddSchoolsControl.resx">
+      <DependentUpon>AddSchoolsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SchoolsControls\EditSchoolsControl.resx">
+      <DependentUpon>EditSchoolsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SchoolsControls\ViewSchoolsControl.resx">
+      <DependentUpon>ViewSchoolsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -189,13 +297,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\AddressesControls\" />
-    <Folder Include="Controls\CountriesControls\" />
-    <Folder Include="Controls\CoursesControls\" />
     <Folder Include="Controls\DegreesControls\" />
-    <Folder Include="Controls\LevelsControls\" />
     <Folder Include="Controls\PositionsControls\" />
     <Folder Include="Controls\ProjectsControls\" />
-    <Folder Include="Controls\SchoolsControls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
