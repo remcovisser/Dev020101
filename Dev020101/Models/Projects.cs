@@ -8,7 +8,7 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Projects
+    class Projects : MySqlModel<Projects>
     {
         public int project_id;
         public float budget;

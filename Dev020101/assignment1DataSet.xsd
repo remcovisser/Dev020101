@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="assignment1DataSet" targetNamespace="http://tempuri.org/assignment1DataSet.xsd" xmlns:mstns="http://tempuri.org/assignment1DataSet.xsd" xmlns="http://tempuri.org/assignment1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="assignment1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="assignment1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Dev020101.Properties.Settings.GlobalReference.Default.assignment1ConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="addressesTableAdapter" GeneratorDataComponentClassName="addressesTableAdapter" Name="addresses" UserDataComponentName="addressesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.addresses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `country_id`, `postalCode`, `city_id`, `street`, `number` FROM `addresses`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="citiesTableAdapter" GeneratorDataComponentClassName="citiesTableAdapter" Name="cities" UserDataComponentName="citiesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.cities" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `city_id`, `name` FROM `cities`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="countriesTableAdapter" GeneratorDataComponentClassName="countriesTableAdapter" Name="countries" UserDataComponentName="countriesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.countries" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `country_id`, `name` FROM `countries`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="coursesTableAdapter" GeneratorDataComponentClassName="coursesTableAdapter" Name="courses" UserDataComponentName="coursesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.courses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `course_id`, `name` FROM `courses`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="degreesTableAdapter" GeneratorDataComponentClassName="degreesTableAdapter" Name="degrees" UserDataComponentName="degreesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.degrees" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `degree_id`, `school_id`, `level_id`, `course_id` FROM `degrees`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employeeadressesTableAdapter" GeneratorDataComponentClassName="employeeadressesTableAdapter" Name="employeeadresses" UserDataComponentName="employeeadressesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.employeeadresses" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `country_id`, `postalCode`, `bsn`, `residence` FROM `employeeadresses`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employeedegreesTableAdapter" GeneratorDataComponentClassName="employeedegreesTableAdapter" Name="employeedegrees" UserDataComponentName="employeedegreesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.employeedegrees" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `degree_id`, `bsn` FROM `employeedegrees`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employeepositionsTableAdapter" GeneratorDataComponentClassName="employeepositionsTableAdapter" Name="employeepositions" UserDataComponentName="employeepositionsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.employeepositions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `bsn`, `project_id`, `position_id` FROM `employeepositions`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employeesTableAdapter" GeneratorDataComponentClassName="employeesTableAdapter" Name="employees" UserDataComponentName="employeesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.employees" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `bsn`, `firstName`, `lastName`, `buildingName` FROM `employees`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="headquatersTableAdapter" GeneratorDataComponentClassName="headquatersTableAdapter" Name="headquaters" UserDataComponentName="headquatersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.headquaters" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `buildingName`, `rooms`, `rent` FROM `headquaters`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="levelsTableAdapter" GeneratorDataComponentClassName="levelsTableAdapter" Name="levels" UserDataComponentName="levelsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.levels" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `level_id`, `name` FROM `levels`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="positionsTableAdapter" GeneratorDataComponentClassName="positionsTableAdapter" Name="positions" UserDataComponentName="positionsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.positions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `position_id`, `name`, `description`, `fee` FROM `positions`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="projectsTableAdapter" GeneratorDataComponentClassName="projectsTableAdapter" Name="projects" UserDataComponentName="projectsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.projects" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `project_id`, `budget`, `allocatedHours`, `buildingName`, `country_id`, `postalCode` FROM `projects`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="schoolsTableAdapter" GeneratorDataComponentClassName="schoolsTableAdapter" Name="schools" UserDataComponentName="schoolsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="assignment1ConnectionString (Settings)" DbObjectName="assignment1.schools" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `school_id`, `name` FROM `schools`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="assignment1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="assignment1DataSet" msprop:Generator_UserDSName="assignment1DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="addresses" msprop:Generator_TableClassName="addressesDataTable" msprop:Generator_TableVarName="tableaddresses" msprop:Generator_TablePropName="addresses" msprop:Generator_RowDeletingName="addressesRowDeleting" msprop:Generator_RowChangingName="addressesRowChanging" msprop:Generator_RowEvHandlerName="addressesRowChangeEventHandler" msprop:Generator_RowDeletedName="addressesRowDeleted" msprop:Generator_UserTableName="addresses" msprop:Generator_RowChangedName="addressesRowChanged" msprop:Generator_RowEvArgName="addressesRowChangeEvent" msprop:Generator_RowClassName="addressesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cities" msprop:Generator_TableClassName="citiesDataTable" msprop:Generator_TableVarName="tablecities" msprop:Generator_TablePropName="cities" msprop:Generator_RowDeletingName="citiesRowDeleting" msprop:Generator_RowChangingName="citiesRowChanging" msprop:Generator_RowEvHandlerName="citiesRowChangeEventHandler" msprop:Generator_RowDeletedName="citiesRowDeleted" msprop:Generator_UserTableName="cities" msprop:Generator_RowChangedName="citiesRowChanged" msprop:Generator_RowEvArgName="citiesRowChangeEvent" msprop:Generator_RowClassName="citiesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="countries" msprop:Generator_TableClassName="countriesDataTable" msprop:Generator_TableVarName="tablecountries" msprop:Generator_TablePropName="countries" msprop:Generator_RowDeletingName="countriesRowDeleting" msprop:Generator_RowChangingName="countriesRowChanging" msprop:Generator_RowEvHandlerName="countriesRowChangeEventHandler" msprop:Generator_RowDeletedName="countriesRowDeleted" msprop:Generator_UserTableName="countries" msprop:Generator_RowChangedName="countriesRowChanged" msprop:Generator_RowEvArgName="countriesRowChangeEvent" msprop:Generator_RowClassName="countriesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="courses" msprop:Generator_TableClassName="coursesDataTable" msprop:Generator_TableVarName="tablecourses" msprop:Generator_TablePropName="courses" msprop:Generator_RowDeletingName="coursesRowDeleting" msprop:Generator_RowChangingName="coursesRowChanging" msprop:Generator_RowEvHandlerName="coursesRowChangeEventHandler" msprop:Generator_RowDeletedName="coursesRowDeleted" msprop:Generator_UserTableName="courses" msprop:Generator_RowChangedName="coursesRowChanged" msprop:Generator_RowEvArgName="coursesRowChangeEvent" msprop:Generator_RowClassName="coursesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="degrees" msprop:Generator_TableClassName="degreesDataTable" msprop:Generator_TableVarName="tabledegrees" msprop:Generator_TablePropName="degrees" msprop:Generator_RowDeletingName="degreesRowDeleting" msprop:Generator_RowChangingName="degreesRowChanging" msprop:Generator_RowEvHandlerName="degreesRowChangeEventHandler" msprop:Generator_RowDeletedName="degreesRowDeleted" msprop:Generator_UserTableName="degrees" msprop:Generator_RowChangedName="degreesRowChanged" msprop:Generator_RowEvArgName="degreesRowChangeEvent" msprop:Generator_RowClassName="degreesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employeeadresses" msprop:Generator_TableClassName="employeeadressesDataTable" msprop:Generator_TableVarName="tableemployeeadresses" msprop:Generator_TablePropName="employeeadresses" msprop:Generator_RowDeletingName="employeeadressesRowDeleting" msprop:Generator_RowChangingName="employeeadressesRowChanging" msprop:Generator_RowEvHandlerName="employeeadressesRowChangeEventHandler" msprop:Generator_RowDeletedName="employeeadressesRowDeleted" msprop:Generator_UserTableName="employeeadresses" msprop:Generator_RowChangedName="employeeadressesRowChanged" msprop:Generator_RowEvArgName="employeeadressesRowChangeEvent" msprop:Generator_RowClassName="employeeadressesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employeedegrees" msprop:Generator_TableClassName="employeedegreesDataTable" msprop:Generator_TableVarName="tableemployeedegrees" msprop:Generator_TablePropName="employeedegrees" msprop:Generator_RowDeletingName="employeedegreesRowDeleting" msprop:Generator_RowChangingName="employeedegreesRowChanging" msprop:Generator_RowEvHandlerName="employeedegreesRowChangeEventHandler" msprop:Generator_RowDeletedName="employeedegreesRowDeleted" msprop:Generator_UserTableName="employeedegrees" msprop:Generator_RowChangedName="employeedegreesRowChanged" msprop:Generator_RowEvArgName="employeedegreesRowChangeEvent" msprop:Generator_RowClassName="employeedegreesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employeepositions" msprop:Generator_TableClassName="employeepositionsDataTable" msprop:Generator_TableVarName="tableemployeepositions" msprop:Generator_TablePropName="employeepositions" msprop:Generator_RowDeletingName="employeepositionsRowDeleting" msprop:Generator_RowChangingName="employeepositionsRowChanging" msprop:Generator_RowEvHandlerName="employeepositionsRowChangeEventHandler" msprop:Generator_RowDeletedName="employeepositionsRowDeleted" msprop:Generator_UserTableName="employeepositions" msprop:Generator_RowChangedName="employeepositionsRowChanged" msprop:Generator_RowEvArgName="employeepositionsRowChangeEvent" msprop:Generator_RowClassName="employeepositionsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employees" msprop:Generator_TableClassName="employeesDataTable" msprop:Generator_TableVarName="tableemployees" msprop:Generator_TablePropName="employees" msprop:Generator_RowDeletingName="employeesRowDeleting" msprop:Generator_RowChangingName="employeesRowChanging" msprop:Generator_RowEvHandlerName="employeesRowChangeEventHandler" msprop:Generator_RowDeletedName="employeesRowDeleted" msprop:Generator_UserTableName="employees" msprop:Generator_RowChangedName="employeesRowChanged" msprop:Generator_RowEvArgName="employeesRowChangeEvent" msprop:Generator_RowClassName="employeesRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="headquaters" msprop:Generator_TableClassName="headquatersDataTable" msprop:Generator_TableVarName="tableheadquaters" msprop:Generator_TablePropName="headquaters" msprop:Generator_RowDeletingName="headquatersRowDeleting" msprop:Generator_RowChangingName="headquatersRowChanging" msprop:Generator_RowEvHandlerName="headquatersRowChangeEventHandler" msprop:Generator_RowDeletedName="headquatersRowDeleted" msprop:Generator_UserTableName="headquaters" msprop:Generator_RowChangedName="headquatersRowChanged" msprop:Generator_RowEvArgName="headquatersRowChangeEvent" msprop:Generator_RowClassName="headquatersRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="levels" msprop:Generator_TableClassName="levelsDataTable" msprop:Generator_TableVarName="tablelevels" msprop:Generator_TablePropName="levels" msprop:Generator_RowDeletingName="levelsRowDeleting" msprop:Generator_RowChangingName="levelsRowChanging" msprop:Generator_RowEvHandlerName="levelsRowChangeEventHandler" msprop:Generator_RowDeletedName="levelsRowDeleted" msprop:Generator_UserTableName="levels" msprop:Generator_RowChangedName="levelsRowChanged" msprop:Generator_RowEvArgName="levelsRowChangeEvent" msprop:Generator_RowClassName="levelsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="positions" msprop:Generator_TableClassName="positionsDataTable" msprop:Generator_TableVarName="tablepositions" msprop:Generator_TablePropName="positions" msprop:Generator_RowDeletingName="positionsRowDeleting" msprop:Generator_RowChangingName="positionsRowChanging" msprop:Generator_RowEvHandlerName="positionsRowChangeEventHandler" msprop:Generator_RowDeletedName="positionsRowDeleted" msprop:Generator_UserTableName="positions" msprop:Generator_RowChangedName="positionsRowChanged" msprop:Generator_RowEvArgName="positionsRowChangeEvent" msprop:Generator_RowClassName="positionsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="projects" msprop:Generator_TableClassName="projectsDataTable" msprop:Generator_TableVarName="tableprojects" msprop:Generator_TablePropName="projects" msprop:Generator_RowDeletingName="projectsRowDeleting" msprop:Generator_RowChangingName="projectsRowChanging" msprop:Generator_RowEvHandlerName="projectsRowChangeEventHandler" msprop:Generator_RowDeletedName="projectsRowDeleted" msprop:Generator_UserTableName="projects" msprop:Generator_RowChangedName="projectsRowChanged" msprop:Generator_RowEvArgName="projectsRowChangeEvent" msprop:Generator_RowClassName="projectsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="schools" msprop:Generator_TableClassName="schoolsDataTable" msprop:Generator_TableVarName="tableschools" msprop:Generator_TablePropName="schools" msprop:Generator_RowDeletingName="schoolsRowDeleting" msprop:Generator_RowChangingName="schoolsRowChanging" msprop:Generator_RowEvHandlerName="schoolsRowChangeEventHandler" msprop:Generator_RowDeletedName="schoolsRowDeleted" msprop:Generator_UserTableName="schools" msprop:Generator_RowChangedName="schoolsRowChanged" msprop:Generator_RowEvArgName="schoolsRowChangeEvent" msprop:Generator_RowClassName="schoolsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

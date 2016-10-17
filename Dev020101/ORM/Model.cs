@@ -87,13 +87,9 @@ namespace Dev020101.ORM
 
             foreach(FieldInfo field in fields)
             {
-                // Skip id field
-                if (!field.Equals(fields.First()))
-                {
-                    string fieldName = field.Name;
-                    object value = field.GetValue(instance);
-                    formatedData.Add(new Tuple<string, object>(field.Name, field.GetValue(instance)));
-                }
+                string fieldName = field.Name;
+                object value = field.GetValue(instance);
+                formatedData.Add(new Tuple<string, object>(field.Name, field.GetValue(instance)));
             }
 
             return formatedData ;

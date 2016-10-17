@@ -41,7 +41,21 @@ namespace Dev020101.ORM
 
         public bool delete()
         {
-            query = "delete from " + table + " where id = " + GetType().GetFields().First().GetValue(this);
+            FieldInfo[] fields = this.GetType().GetFields();
+            query = "delete from " + table;
+
+            foreach (FieldInfo field in fields)
+            {
+                if(fields.First() == field)
+                {
+                    query += " where " + field.Name + " = " + "'" + this.GetType().GetField(field.Name).GetValue(this) + "'";
+                } 
+                else
+                {
+                    query += " and " + field.Name + " = " + "'" + this.GetType().GetField(field.Name).GetValue(this) + "'";
+                }
+            }
+
             MySqlCommand command = new MySqlCommand(query, connection);
             command.ExecuteNonQuery();
 
@@ -224,7 +238,7 @@ namespace Dev020101.ORM
             return sum;
         }
 
-        public bool update(string field = null)
+        public bool update(string field = null, object value = null)
         {
             List<Tuple<string, object>> formatedData = baseModel.saveOrUpdate(this, table);
             query = "update " + table + " set ";
@@ -245,7 +259,12 @@ namespace Dev020101.ORM
                 query += fieldsAndData + " where " + field + " = ";
             }
 
-            query += this.GetType().GetFields().First().GetValue(this);
+            if(value == null)
+            {
+                value = this.GetType().GetFields().First().GetValue(this);
+            }
+
+            query += "'" + value + "'";
             MySqlCommand command = new MySqlCommand(query, connection);
             command.ExecuteNonQuery();
 

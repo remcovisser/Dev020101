@@ -17,14 +17,47 @@ namespace Dev020101.Controls.EmployeesControls
         public AddEmployeesControl()
         {
             InitializeComponent();
+
+            // Add headquarters to the combobox
+            List<Headquarters> headquaters = new Headquarters().get();
+            int x = 0;
+            foreach(Headquarters headquarter in headquaters)
+            {
+                headquartersComboBox.Items.Insert(x, headquarter.buildingName);
+                x++;
+            }
+        }
+
+        // Check if there is an employee with the given BSN
+        private bool employeeUnique(string bsn)
+        {
+            if(new Employees().find(bsn, "bsn").count() == 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         private void SaveButtom_Click(object sender, EventArgs e)
         {
-            Employees newEmployee = new Employees();
-            newEmployee.firstName = firstnameTextbox.Text;
-            newEmployee.lastName = lastnameTextbox.Text;
-            newEmployee.save();
+            if (employeeUnique(bsnTextbox.Text))
+            {
+                Employees newEmployee = new Employees();
+                newEmployee.bsn = bsnTextbox.Text;
+                newEmployee.firstName = firstnameTextbox.Text;
+                newEmployee.lastName = lastnameTextbox.Text;
+                newEmployee.buildingName = headquartersComboBox.Text;
+                newEmployee.save();
+
+                feedbackLabel.Text = "The employee has been created";
+                feedbackLabel.ForeColor = System.Drawing.Color.Green;
+
+            }
+            else
+            {
+                feedbackLabel.Text = "There is already an employee with that BSN";
+                feedbackLabel.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }

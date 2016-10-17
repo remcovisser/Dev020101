@@ -8,7 +8,7 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Courses
+    class Courses : MySqlModel<Courses>
     {
         public int course_id;
         public string name;

@@ -9,7 +9,7 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class EmployeeDegrees
+    class EmployeeDegrees : MySqlModel<EmployeeDegrees>
     {
         public int degree_id;
         public int bsn;

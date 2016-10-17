@@ -10,7 +10,7 @@ namespace Dev020101.Models
 {
     public class Employees : MySqlModel<Employees>
     {
-        public int bsn;
+        public string bsn;
         public string firstName;
         public string lastName;
         public string buildingName;

@@ -8,7 +8,7 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class Addresses
+    class Addresses : MySqlModel<Addresses>
     {
         public int country_id;
         public string postalCode;

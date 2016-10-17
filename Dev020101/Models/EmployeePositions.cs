@@ -8,9 +8,9 @@ using Dev020101.ORM;
 
 namespace Dev020101.Models
 {
-    class EmployeePositions
+    class EmployeePositions : MySqlModel<EmployeePositions>
     {
-        public int bsn;
+        public string bsn;
         public int position_id;
         public int project_id;
     }

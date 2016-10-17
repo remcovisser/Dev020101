@@ -35,14 +35,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.bsnTextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.feedbackLabel = new System.Windows.Forms.Label();
+            this.headquartersComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SaveButtom
             // 
-            this.SaveButtom.Location = new System.Drawing.Point(164, 678);
+            this.SaveButtom.Location = new System.Drawing.Point(164, 627);
             this.SaveButtom.Name = "SaveButtom";
             this.SaveButtom.Size = new System.Drawing.Size(150, 23);
-            this.SaveButtom.TabIndex = 0;
+            this.SaveButtom.TabIndex = 4;
             this.SaveButtom.Text = "Save";
             this.SaveButtom.UseVisualStyleBackColor = true;
             this.SaveButtom.Click += new System.EventHandler(this.saveButton_Click);
@@ -83,9 +87,8 @@
             // 
             this.bsnTextbox.Location = new System.Drawing.Point(164, 73);
             this.bsnTextbox.Name = "bsnTextbox";
-            this.bsnTextbox.ReadOnly = true;
             this.bsnTextbox.Size = new System.Drawing.Size(150, 22);
-            this.bsnTextbox.TabIndex = 5;
+            this.bsnTextbox.TabIndex = 1;
             // 
             // label3
             // 
@@ -96,10 +99,49 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "BSN";
             // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(164, 684);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(150, 23);
+            this.deleteButton.TabIndex = 5;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            // 
+            // feedbackLabel
+            // 
+            this.feedbackLabel.AutoSize = true;
+            this.feedbackLabel.Location = new System.Drawing.Point(161, 586);
+            this.feedbackLabel.Name = "feedbackLabel";
+            this.feedbackLabel.Size = new System.Drawing.Size(0, 17);
+            this.feedbackLabel.TabIndex = 15;
+            // 
+            // headquartersComboBox
+            // 
+            this.headquartersComboBox.FormattingEnabled = true;
+            this.headquartersComboBox.Location = new System.Drawing.Point(164, 352);
+            this.headquartersComboBox.Name = "headquartersComboBox";
+            this.headquartersComboBox.Size = new System.Drawing.Size(150, 24);
+            this.headquartersComboBox.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(164, 317);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 17);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Headquarters";
+            // 
             // EditEmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.headquartersComboBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.feedbackLabel);
+            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.bsnTextbox);
             this.Controls.Add(this.label2);
@@ -123,5 +165,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox bsnTextbox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Label feedbackLabel;
+        private System.Windows.Forms.ComboBox headquartersComboBox;
+        private System.Windows.Forms.Label label4;
     }
 }
