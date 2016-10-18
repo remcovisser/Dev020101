@@ -40,8 +40,9 @@ namespace Dev020101.Controls.CountriesControls
             if (countryUnique(nameTextbox.Text))
             {
                 Countries updatedCountry = new Countries();
+                updatedCountry.country_id = currentCountry.country_id;
                 updatedCountry.country_name = nameTextbox.Text;
-                updatedCountry.update("country_name", currentCountry.country_name);
+                updatedCountry.update("country_id", currentCountry.country_id);
 
                 currentCountry = updatedCountry;
 
@@ -57,7 +58,7 @@ namespace Dev020101.Controls.CountriesControls
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            bool deleteFeedback = new Countries().find(currentCountry.country_name, "country_name").grab().delete();
+            bool deleteFeedback = new Countries().find(currentCountry.country_id, "country_id").grab().delete();
 
             if (deleteFeedback)
             {

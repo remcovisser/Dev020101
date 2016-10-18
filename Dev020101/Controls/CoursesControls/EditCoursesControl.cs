@@ -28,7 +28,7 @@ namespace Dev020101.Controls.CoursesControls
         // Check if there is an course with the given BSN
         private bool courseUnique(string name)
         {
-            if (new Courses().find(name, "course_name").count() == 0)
+            if (name == currentCourse.course_name || new Courses().find(name, "course_name").count() == 0)
             {
                 return true;
             }
@@ -40,6 +40,7 @@ namespace Dev020101.Controls.CoursesControls
             if (courseUnique(nameTextbox.Text))
             {
                 Courses updatedCourse = new Courses();
+                updatedCourse.course_id = currentCourse.course_id;
                 updatedCourse.course_name = nameTextbox.Text;
                 updatedCourse.update("course_name", currentCourse.course_name);
 
@@ -57,7 +58,7 @@ namespace Dev020101.Controls.CoursesControls
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            bool deleteFeedback = new Courses().find(currentCourse.course_name, "course_name").grab().delete();
+            bool deleteFeedback = new Courses().find(currentCourse.course_id, "course_id").grab().delete();
 
             if (deleteFeedback)
             {

@@ -10,6 +10,7 @@ namespace Dev020101.Models
 {
     public class Streets : MySqlModel<Streets>
     {
+        public int street_id;
         public string street_name;
     }
 }

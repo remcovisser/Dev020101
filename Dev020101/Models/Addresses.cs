@@ -13,8 +13,24 @@ namespace Dev020101.Models
         public int address_id;
         public string number;
         public string postalCode;
-        public string city_name;
-        public string country_name;
-        public string street_name;
+        public int street_id;
+        public int city_id;
+        public int country_id;
+        
+        // Relations
+        public Countries country()
+        {
+            return new Countries().hasOne(this, "country_id", "country_id");
+        }
+
+        public Cities city()
+        {
+            return new Cities().hasOne(this, "city_id", "city_id");
+        }
+
+        public Streets street()
+        {
+            return new Streets().hasOne(this, "street_id", "street_id");
+        }
     }
 }

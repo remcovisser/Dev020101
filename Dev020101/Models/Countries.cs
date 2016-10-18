@@ -10,6 +10,7 @@ namespace Dev020101.Models
 {
     public class Countries : MySqlModel<Countries>
     {
+        public int country_id;
         public string country_name;
     }
 }

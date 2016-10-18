@@ -28,7 +28,7 @@ namespace Dev020101.Controls.StreetsControls
         // Check if there is a street with the given name
         private bool streeetUnique(string name)
         {
-            if (new Streets().find(name, "street_name").count() == 0)
+            if (name == currentStreet.street_name || new Streets().find(name, "street_name").count() == 0)
             {
                 return true;
             }
@@ -40,6 +40,7 @@ namespace Dev020101.Controls.StreetsControls
             if (streeetUnique(nameTextbox.Text))
             {
                 Streets updatedStreet = new Streets();
+                updatedStreet.street_id = currentStreet.street_id;
                 updatedStreet.street_name = nameTextbox.Text;
                 updatedStreet.update("street_name", currentStreet.street_name);
 
@@ -57,7 +58,7 @@ namespace Dev020101.Controls.StreetsControls
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            bool deleteFeedback = new Streets().find(currentStreet.street_name, "street_name").grab().delete();
+            bool deleteFeedback = new Streets().find(currentStreet.street_id, "street_id").grab().delete();
 
             if (deleteFeedback)
             {

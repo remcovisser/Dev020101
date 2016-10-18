@@ -41,12 +41,12 @@ namespace Dev020101.Controls.ProjectsControls
             x = 0;
             foreach (Addresses addres in addresses)
             {
-                string addressName = addres.address_id + " = " + addres.street_name + " " + addres.number;
+                string addressName = addres.address_id + " = " + addres.street().street_name + " " + addres.number;
                 addresscomboBox.Items.Insert(x, addressName);
                 x++;
             }
             Addresses projectAdress = currentProject.address();
-            string selectedAddress = projectAdress.address_id + " = " + projectAdress.street_name + " " + projectAdress.number;
+            string selectedAddress = projectAdress.address_id + " = " + projectAdress.street_id + " " + projectAdress.number;
             addresscomboBox.SelectedText = selectedAddress;
         }
 

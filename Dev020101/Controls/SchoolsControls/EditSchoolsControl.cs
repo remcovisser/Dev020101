@@ -28,7 +28,7 @@ namespace Dev020101.Controls.SchoolsControls
         // Check if there is a school with the given name
         private bool schoolUnique(string name)
         {
-            if (new Schools().find(name, "school_name").count() == 0)
+            if (name == currentSchool.school_name || new Schools().find(name, "school_name").count() == 0)
             {
                 return true;
             }
@@ -40,6 +40,7 @@ namespace Dev020101.Controls.SchoolsControls
             if (schoolUnique(nameTextbox.Text))
             {
                 Schools updateSchool = new Schools();
+                updateSchool.school_id = currentSchool.school_id;
                 updateSchool.school_name = nameTextbox.Text;
                 updateSchool.update("school_name", currentSchool.school_name);
 
@@ -57,7 +58,7 @@ namespace Dev020101.Controls.SchoolsControls
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            bool deleteFeedback = new Schools().find(currentSchool.school_name, "school_name").grab().delete();
+            bool deleteFeedback = new Schools().find(currentSchool.school_id, "school_id").grab().delete();
 
             if (deleteFeedback)
             {

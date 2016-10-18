@@ -31,7 +31,7 @@ namespace Dev020101.Controls.ProjectsControls
             x = 0;
             foreach (Addresses addres in addresses)
             {
-                string addressName = addres.address_id + " = " + addres.street_name + " " + addres.number + " - " + addres.city_name + " - " + addres.country_name;
+                string addressName = addres.address_id + " = " + addres.street().street_name + " " + addres.number + " - " + addres.city().city_name + " - " + addres.country().country_name;
                 addresscomboBox.Items.Insert(x, addressName);
                 x++;
             }

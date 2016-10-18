@@ -28,7 +28,7 @@ namespace Dev020101.Controls.CitiesControls
         // Check if there is a city with the given name
         private bool cityUnique(string name)
         {
-            if (new Cities().find(name, "city_name").count() == 0)
+            if (name == currentCity.city_name || new Cities().find(name, "city_name").count() == 0)
             {
                 return true;
             }
@@ -41,12 +41,13 @@ namespace Dev020101.Controls.CitiesControls
             if(cityUnique(nameTextbox.Text))
             {
                 Cities updatedCity = new Cities();
+                updatedCity.city_id = currentCity.city_id;
                 updatedCity.city_name = nameTextbox.Text;
-                updatedCity.update("city_name", currentCity.city_name);
+                updatedCity.update("city_id", currentCity.city_id);
 
                 currentCity = updatedCity;
 
-                feedbackLabel.Text = "The city has been created";
+                feedbackLabel.Text = "The city has been updated";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
             }
             else
@@ -59,7 +60,7 @@ namespace Dev020101.Controls.CitiesControls
         // Delete the current city
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            bool deleteFeedback = new Cities().find(currentCity.city_name, "city_name").grab().delete();
+            bool deleteFeedback = new Cities().find(currentCity.city_id, "city_id").grab().delete();
 
             if (deleteFeedback)
             {

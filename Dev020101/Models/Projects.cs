@@ -14,8 +14,8 @@ namespace Dev020101.Models
         public string name;
         public float budget;
         public int allocatedHours;
-        public string buildingName;
         public int address_id;
+        public string buildingName;
 
         // Relations
         public Addresses address()
