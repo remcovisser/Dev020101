@@ -15,6 +15,8 @@ using Dev020101.Controls.CountriesControls;
 using Dev020101.Controls.CoursesControls;
 using Dev020101.Controls.LevelsControls;
 using Dev020101.Controls.SchoolsControls;
+using Dev020101.Controls.PositionsControls;
+using Dev020101.Controls.StreetsControls;
 
 namespace Dev020101
 {
@@ -115,6 +117,28 @@ namespace Dev020101
         private void addSchoolsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             changeControl(new AddSchoolsControl());
+        }
+
+        // Positions overview
+        private void viewPositionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewPositionsControl());
+        }
+        // Add positions
+        private void addPositionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddPositionsControl());
+        }
+
+        // Streets overview
+        private void viewStreetsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new ViewStreetsControl());
+        }
+        // Add streets
+        private void addStreetsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new AddStreetsControl());
         }
     }
 }

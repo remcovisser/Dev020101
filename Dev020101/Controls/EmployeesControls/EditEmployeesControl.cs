@@ -40,7 +40,7 @@ namespace Dev020101.Controls.EmployeesControls
         // Check if there is an employee with the given BSN
         private bool employeeUnique(string bsn)
         {
-            if (new Employees().find(bsn, "bsn").count() == 0)
+            if (bsn == currentEmployee.bsn || new Employees().find(bsn, "bsn").count() == 0)
             {
                 return true;
             }

@@ -50,6 +50,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\AddressesControls\AddAddressesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressesControls\AddAddressesControl.Designer.cs">
+      <DependentUpon>AddAddressesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddressesControls\EditAddressesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressesControls\EditAddressesControl.Designer.cs">
+      <DependentUpon>EditAddressesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddressesControls\ViewAddressesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressesControls\ViewAddressesControl.Designer.cs">
+      <DependentUpon>ViewAddressesControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CitiesControls\AddCitiesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -103,6 +121,24 @@
     </Compile>
     <Compile Include="Controls\CoursesControls\ViewCoursesControl.Designer.cs">
       <DependentUpon>ViewCoursesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DegreesControls\AddDegreesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DegreesControls\AddDegreesControl.Designer.cs">
+      <DependentUpon>AddDegreesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DegreesControls\EditDegreesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DegreesControls\EditDegreesControl.Designer.cs">
+      <DependentUpon>EditDegreesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DegreesControls\ViewDegreesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DegreesControls\ViewDegreesControl.Designer.cs">
+      <DependentUpon>ViewDegreesControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\EmployeesControls\AddEmployeesControl.cs">
       <SubType>UserControl</SubType>
@@ -158,6 +194,42 @@
     <Compile Include="Controls\LevelsControls\ViewLevelsControl.Designer.cs">
       <DependentUpon>ViewLevelsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\PositionsControls\AddPositionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PositionsControls\AddPositionsControl.Designer.cs">
+      <DependentUpon>AddPositionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PositionsControls\EditPositionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PositionsControls\EditPositionsControl.Designer.cs">
+      <DependentUpon>EditPositionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PositionsControls\ViewPositionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PositionsControls\ViewPositionsControl.Designer.cs">
+      <DependentUpon>ViewPositionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProjectsControls\AddProjectsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectsControls\AddProjectsControl.Designer.cs">
+      <DependentUpon>AddProjectsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProjectsControls\EditProjectsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectsControls\EditProjectsControl.Designer.cs">
+      <DependentUpon>EditProjectsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProjectsControls\ViewProjectsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectsControls\ViewProjectsControl.Designer.cs">
+      <DependentUpon>ViewProjectsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SchoolsControls\AddSchoolsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +247,24 @@
     </Compile>
     <Compile Include="Controls\SchoolsControls\ViewSchoolsControl.Designer.cs">
       <DependentUpon>ViewSchoolsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StreetsControls\AddStreetsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StreetsControls\AddStreetsControl.Designer.cs">
+      <DependentUpon>AddStreetsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StreetsControls\EditStreetsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StreetsControls\EditStreetsControl.Designer.cs">
+      <DependentUpon>EditStreetsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StreetsControls\ViewStreetsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StreetsControls\ViewStreetsControl.Designer.cs">
+      <DependentUpon>ViewStreetsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -195,12 +285,22 @@
     <Compile Include="Models\Positions.cs" />
     <Compile Include="Models\Projects.cs" />
     <Compile Include="Models\Schools.cs" />
+    <Compile Include="Models\Streets.cs" />
     <Compile Include="ORM\Database.cs" />
     <Compile Include="ORM\Model.cs" />
     <Compile Include="ORM\MongoModel.cs" />
     <Compile Include="ORM\MySqlModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AddressesControls\AddAddressesControl.resx">
+      <DependentUpon>AddAddressesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddressesControls\EditAddressesControl.resx">
+      <DependentUpon>EditAddressesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddressesControls\ViewAddressesControl.resx">
+      <DependentUpon>ViewAddressesControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CitiesControls\AddCitiesControl.resx">
       <DependentUpon>AddCitiesControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +327,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CoursesControls\ViewCoursesControl.resx">
       <DependentUpon>ViewCoursesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DegreesControls\AddDegreesControl.resx">
+      <DependentUpon>AddDegreesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DegreesControls\EditDegreesControl.resx">
+      <DependentUpon>EditDegreesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DegreesControls\ViewDegreesControl.resx">
+      <DependentUpon>ViewDegreesControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\EmployeesControls\AddEmployeesControl.resx">
       <DependentUpon>AddEmployeesControl.cs</DependentUpon>
@@ -255,6 +364,24 @@
     <EmbeddedResource Include="Controls\LevelsControls\ViewLevelsControl.resx">
       <DependentUpon>ViewLevelsControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PositionsControls\AddPositionsControl.resx">
+      <DependentUpon>AddPositionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PositionsControls\EditPositionsControl.resx">
+      <DependentUpon>EditPositionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PositionsControls\ViewPositionsControl.resx">
+      <DependentUpon>ViewPositionsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectsControls\AddProjectsControl.resx">
+      <DependentUpon>AddProjectsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectsControls\EditProjectsControl.resx">
+      <DependentUpon>EditProjectsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectsControls\ViewProjectsControl.resx">
+      <DependentUpon>ViewProjectsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\SchoolsControls\AddSchoolsControl.resx">
       <DependentUpon>AddSchoolsControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,6 +390,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SchoolsControls\ViewSchoolsControl.resx">
       <DependentUpon>ViewSchoolsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StreetsControls\AddStreetsControl.resx">
+      <DependentUpon>AddStreetsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StreetsControls\EditStreetsControl.resx">
+      <DependentUpon>EditStreetsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StreetsControls\ViewStreetsControl.resx">
+      <DependentUpon>ViewStreetsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -295,12 +431,7 @@
     <Content Include="Resources\DatabaseDesign.png" />
     <Content Include="Resources\DatabaseDesign.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\AddressesControls\" />
-    <Folder Include="Controls\DegreesControls\" />
-    <Folder Include="Controls\PositionsControls\" />
-    <Folder Include="Controls\ProjectsControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

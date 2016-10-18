@@ -49,6 +49,9 @@
             this.citiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewCitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCitiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.streetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewStreetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addStreetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.degreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewDegreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addDegreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -174,7 +177,8 @@
             this.viewAddressesToolStripMenuItem,
             this.addAddressesToolStripMenuItem,
             this.countriesToolStripMenuItem,
-            this.citiesToolStripMenuItem});
+            this.citiesToolStripMenuItem,
+            this.streetsToolStripMenuItem});
             this.addressesToolStripMenuItem.Name = "addressesToolStripMenuItem";
             this.addressesToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.addressesToolStripMenuItem.Text = "Addresses";
@@ -203,14 +207,14 @@
             // viewCountriesToolStripMenuItem
             // 
             this.viewCountriesToolStripMenuItem.Name = "viewCountriesToolStripMenuItem";
-            this.viewCountriesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewCountriesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.viewCountriesToolStripMenuItem.Text = "View countries";
             this.viewCountriesToolStripMenuItem.Click += new System.EventHandler(this.viewCountriesToolStripMenuItem_Click);
             // 
             // addCountriesToolStripMenuItem
             // 
             this.addCountriesToolStripMenuItem.Name = "addCountriesToolStripMenuItem";
-            this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addCountriesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.addCountriesToolStripMenuItem.Text = "Add countries";
             this.addCountriesToolStripMenuItem.Click += new System.EventHandler(this.addCountriesToolStripMenuItem_Click);
             // 
@@ -236,6 +240,29 @@
             this.addCitiesToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
             this.addCitiesToolStripMenuItem.Text = "Add cities";
             this.addCitiesToolStripMenuItem.Click += new System.EventHandler(this.addCitiesToolStripMenuItem_Click);
+            // 
+            // streetsToolStripMenuItem
+            // 
+            this.streetsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewStreetsToolStripMenuItem,
+            this.addStreetToolStripMenuItem});
+            this.streetsToolStripMenuItem.Name = "streetsToolStripMenuItem";
+            this.streetsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.streetsToolStripMenuItem.Text = "Streets";
+            // 
+            // viewStreetsToolStripMenuItem
+            // 
+            this.viewStreetsToolStripMenuItem.Name = "viewStreetsToolStripMenuItem";
+            this.viewStreetsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewStreetsToolStripMenuItem.Text = "View streets";
+            this.viewStreetsToolStripMenuItem.Click += new System.EventHandler(this.viewStreetsToolStripMenuItem_Click);
+            // 
+            // addStreetToolStripMenuItem
+            // 
+            this.addStreetToolStripMenuItem.Name = "addStreetToolStripMenuItem";
+            this.addStreetToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addStreetToolStripMenuItem.Text = "Add streets";
+            this.addStreetToolStripMenuItem.Click += new System.EventHandler(this.addStreetsToolStripMenuItem_Click);
             // 
             // degreesToolStripMenuItem
             // 
@@ -267,20 +294,20 @@
             this.viewLevelsToolStripMenuItem,
             this.addLevelsToolStripMenuItem});
             this.levelsToolStripMenuItem.Name = "levelsToolStripMenuItem";
-            this.levelsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.levelsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.levelsToolStripMenuItem.Text = "Levels";
             // 
             // viewLevelsToolStripMenuItem
             // 
             this.viewLevelsToolStripMenuItem.Name = "viewLevelsToolStripMenuItem";
-            this.viewLevelsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewLevelsToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.viewLevelsToolStripMenuItem.Text = "View levels";
             this.viewLevelsToolStripMenuItem.Click += new System.EventHandler(this.viewLevelsToolStripMenuItem_Click);
             // 
             // addLevelsToolStripMenuItem
             // 
             this.addLevelsToolStripMenuItem.Name = "addLevelsToolStripMenuItem";
-            this.addLevelsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addLevelsToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
             this.addLevelsToolStripMenuItem.Text = "Add levels";
             this.addLevelsToolStripMenuItem.Click += new System.EventHandler(this.addLevelsToolStripMenuItem_Click);
             // 
@@ -290,20 +317,20 @@
             this.viewCoursesToolStripMenuItem,
             this.addCoursesToolStripMenuItem});
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
-            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.coursesToolStripMenuItem.Text = "Courses";
             // 
             // viewCoursesToolStripMenuItem
             // 
             this.viewCoursesToolStripMenuItem.Name = "viewCoursesToolStripMenuItem";
-            this.viewCoursesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewCoursesToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.viewCoursesToolStripMenuItem.Text = "View courses";
             this.viewCoursesToolStripMenuItem.Click += new System.EventHandler(this.viewCoursesToolStripMenuItem_Click);
             // 
             // addCoursesToolStripMenuItem
             // 
             this.addCoursesToolStripMenuItem.Name = "addCoursesToolStripMenuItem";
-            this.addCoursesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addCoursesToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.addCoursesToolStripMenuItem.Text = "Add courses";
             this.addCoursesToolStripMenuItem.Click += new System.EventHandler(this.addCoursesToolStripMenuItem_Click);
             // 
@@ -313,20 +340,20 @@
             this.viewSchoolsToolStripMenuItem,
             this.addSchoolsToolStripMenuItem});
             this.schoolsToolStripMenuItem.Name = "schoolsToolStripMenuItem";
-            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.schoolsToolStripMenuItem.Text = "Schools";
             // 
             // viewSchoolsToolStripMenuItem
             // 
             this.viewSchoolsToolStripMenuItem.Name = "viewSchoolsToolStripMenuItem";
-            this.viewSchoolsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewSchoolsToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.viewSchoolsToolStripMenuItem.Text = "View schools";
             this.viewSchoolsToolStripMenuItem.Click += new System.EventHandler(this.viewSchoolsToolStripMenuItem_Click);
             // 
             // addSchoolsToolStripMenuItem
             // 
             this.addSchoolsToolStripMenuItem.Name = "addSchoolsToolStripMenuItem";
-            this.addSchoolsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addSchoolsToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.addSchoolsToolStripMenuItem.Text = "Add schools";
             this.addSchoolsToolStripMenuItem.Click += new System.EventHandler(this.addSchoolsToolStripMenuItem_Click);
             // 
@@ -344,12 +371,14 @@
             this.viewPositionsToolStripMenuItem.Name = "viewPositionsToolStripMenuItem";
             this.viewPositionsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.viewPositionsToolStripMenuItem.Text = "View positions";
+            this.viewPositionsToolStripMenuItem.Click += new System.EventHandler(this.viewPositionsToolStripMenuItem_Click);
             // 
             // addPositionsToolStripMenuItem
             // 
             this.addPositionsToolStripMenuItem.Name = "addPositionsToolStripMenuItem";
             this.addPositionsToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.addPositionsToolStripMenuItem.Text = "Add positions";
+            this.addPositionsToolStripMenuItem.Click += new System.EventHandler(this.addPositionsToolStripMenuItem_Click);
             // 
             // activeView
             // 
@@ -429,6 +458,9 @@
         private System.Windows.Forms.ToolStripMenuItem viewPositionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addPositionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem failingProjectsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem streetsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewStreetsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addStreetToolStripMenuItem;
     }
 }
 

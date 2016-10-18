@@ -30,10 +30,11 @@ namespace Dev020101.Controls.HeadquartersControls
         // Check if there is an employee with the given BSN
         private bool headquarterUnique(string buildingName)
         {
-            if (new Headquarters().find(buildingName, "buildingName").count() == 0)
+            if (buildingName == currentHeadquarter.buildingName || new Headquarters().find(buildingName, "buildingName").count() == 0)
             {
                 return true;
             }
+    
             return false;
         }
 

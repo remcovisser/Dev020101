@@ -10,10 +10,11 @@ namespace Dev020101.Models
 {
     public class Addresses : MySqlModel<Addresses>
     {
-        public int country_id;
-        public string postalCode;
-        public int city_id;
-        public string street;
+        public int address_id;
         public string number;
+        public string postalCode;
+        public int street_name;
+        public int country_name;
+        public int city_name; 
     }
 }

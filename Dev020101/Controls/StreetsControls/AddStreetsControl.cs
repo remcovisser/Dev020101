@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 using Dev020101.Models;
 
-namespace Dev020101.Controls.CountriesControls
+namespace Dev020101.Controls.StreetsControls
 {
-    public partial class AddCountriesControl : UserControl
+    public partial class AddStreetsControl : UserControl
     {
-        public AddCountriesControl()
+        public AddStreetsControl()
         {
             InitializeComponent();
         }
 
-        // Check if there is a country with the given name
-        private bool countryUnique(string name)
+        // Check if there is a street with the given name
+        private bool streeetUnique(string name)
         {
-            if (new Countries().find(name, "country_name").count() == 0)
+            if (new Streets().find(name, "street_name").count() == 0)
             {
                 return true;
             }
@@ -31,18 +31,18 @@ namespace Dev020101.Controls.CountriesControls
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            if (countryUnique(nameTextbox.Text))
+            if (streeetUnique(nameTextbox.Text))
             {
-                Countries newCountry = new Countries();
-                newCountry.country_name = nameTextbox.Text;
-                newCountry.save();
+                Streets newStreet = new Streets();
+                newStreet.street_name = nameTextbox.Text;
+                newStreet.save();
 
-                feedbackLabel.Text = "The country has been created";
+                feedbackLabel.Text = "The street has been created";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                feedbackLabel.Text = "There is already a country with that name";
+                feedbackLabel.Text = "There is already a street with that name";
                 feedbackLabel.ForeColor = System.Drawing.Color.Red;
             }
         }
