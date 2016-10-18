@@ -12,6 +12,6 @@ namespace Dev020101.Models
     public class EmployeeDegrees : MySqlModel<EmployeeDegrees>
     {
         public int degree_id;
-        public int bsn;
+        public string bsn;
     }
 }

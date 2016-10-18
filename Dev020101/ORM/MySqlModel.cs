@@ -126,20 +126,7 @@ namespace Dev020101.ORM
             return logicalOperatorBuilder("group by", field, null, null);
         }
 
-        public List<T> hasMany<U>(U parent, string customField = null)
-        {
-            if (customField == null)
-            {
-                string parentName = parent.GetType().Name.ToLower();
-                customField = parentName.Remove(parentName.Length - 1) + "_id";
-            }
-
-            query += " where " + customField + " = " + parent.GetType().GetField("id").GetValue(parent);
-
-            return this.get();
-        }
-
-        public T hasOne<U>(U parent, string leftTableField = null, string rightTableField = null)
+        private void buildRelationQuery<U>(U parent, string leftTableField = null, string rightTableField = null)
         {
             if (leftTableField == null)
             {
@@ -154,6 +141,18 @@ namespace Dev020101.ORM
             }
 
             query += " where " + rightTableField + " = " + parent.GetType().GetField(leftTableField).GetValue(parent);
+        }
+
+        public List<T> hasMany<U>(U parent, string leftTableField = null, string rightTableField = null)
+        {
+            buildRelationQuery(parent, leftTableField, rightTableField);
+
+            return this.get();
+        }
+
+        public T hasOne<U>(U parent, string leftTableField = null, string rightTableField = null)
+        {
+            buildRelationQuery(parent, leftTableField, rightTableField);
 
             return this.grab();
         }

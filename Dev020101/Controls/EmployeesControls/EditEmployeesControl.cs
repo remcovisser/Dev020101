@@ -35,6 +35,14 @@ namespace Dev020101.Controls.EmployeesControls
                 x++;
             }
             headquartersComboBox.SelectedText = currentEmployee.buildingName;
+            // Add addresses to the listbox
+            List<string> dataList = new List<string>();
+            foreach (EmployeeAddresses employeeAddress in currentEmployee.addresses())
+            {
+                string adress = employeeAddress.address().street().street_name;
+                dataList.Add(employeeAddress.address_id + " - " + adress);
+            }
+            AddressList.DataSource = dataList;
         }
 
         // Check if there is an employee with the given BSN
@@ -85,6 +93,29 @@ namespace Dev020101.Controls.EmployeesControls
             {
                 feedbackLabel.Text = "The employee has NOT been deleted";
                 feedbackLabel.ForeColor = System.Drawing.Color.Red;
+            }
+        }
+
+        // New Adress clicked
+        private void newAddressButton_Click(object sender, EventArgs e)
+        {
+            // Clear the form
+            numberTextBox.Text = "";
+        }
+
+        // Adress selected
+        private void AddressList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            newAddressbutton.Visible = true;
+
+            // Fill the form
+            int index = this.AddressList.IndexFromPoint(e.Location);
+            if (AddressList.SelectedItem != null)
+            {
+                string address_id = AddressList.SelectedItem.ToString().Split('-').First().Trim(' ');
+                Addresses selectedAddress = new Addresses().find(address_id, "address_id").grab();
+
+                numberTextBox.Text = selectedAddress.number.ToString();
             }
         }
     }

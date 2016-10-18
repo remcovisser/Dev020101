@@ -35,8 +35,9 @@ namespace Dev020101.Interfaces
         T or(string field, string comparisonOperator, object value);
         T orderby(string field, string sort);
         T groupby(string field);
+        //void buildRelationQuery<U>(U parent, string leftTableField = null, string rightTableField = null);
         O hasOne<U>(U parent, string leftTableField = null, string rightTableField = null);
-        List<O> hasMany<U>(U parent, string customField = null);
+        List<O> hasMany<U>(U parent, string leftTableField = null, string rightTableField = null);
         List<Tuple<int, string, FieldInfo>> formatData(MySqlDataReader data);
     }
 }

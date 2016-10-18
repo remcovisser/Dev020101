@@ -20,5 +20,11 @@ namespace Dev020101.Models
         {
             return this.firstName + " " + this.lastName;
         }
+
+        // Relations
+        public List<EmployeeAddresses> addresses()
+        {
+            return new EmployeeAddresses().hasMany(this, "bsn", "bsn");
+        }
     }
 }
