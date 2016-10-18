@@ -34,10 +34,13 @@
             this.nameTextbox = new System.Windows.Forms.TextBox();
             this.SaveButtom = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.budgetTextbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.buildingcomboBox = new System.Windows.Forms.ComboBox();
+            this.addresscomboBox = new System.Windows.Forms.ComboBox();
+            this.allocatedHourstextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // feedbackLabel
@@ -53,9 +56,10 @@
             this.deleteButton.Location = new System.Drawing.Point(46, 678);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(150, 23);
-            this.deleteButton.TabIndex = 34;
+            this.deleteButton.TabIndex = 7;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // label3
             // 
@@ -71,16 +75,17 @@
             this.nameTextbox.Location = new System.Drawing.Point(46, 67);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(150, 22);
-            this.nameTextbox.TabIndex = 32;
+            this.nameTextbox.TabIndex = 1;
             // 
             // SaveButtom
             // 
             this.SaveButtom.Location = new System.Drawing.Point(46, 621);
             this.SaveButtom.Name = "SaveButtom";
             this.SaveButtom.Size = new System.Drawing.Size(150, 23);
-            this.SaveButtom.TabIndex = 33;
+            this.SaveButtom.TabIndex = 6;
             this.SaveButtom.Text = "Save";
             this.SaveButtom.UseVisualStyleBackColor = true;
+            this.SaveButtom.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // label1
             // 
@@ -91,12 +96,12 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "Budget";
             // 
-            // textBox1
+            // budgetTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 149);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 22);
-            this.textBox1.TabIndex = 37;
+            this.budgetTextbox.Location = new System.Drawing.Point(46, 149);
+            this.budgetTextbox.Name = "budgetTextbox";
+            this.budgetTextbox.Size = new System.Drawing.Size(150, 22);
+            this.budgetTextbox.TabIndex = 2;
             // 
             // label2
             // 
@@ -125,15 +130,41 @@
             this.label5.TabIndex = 44;
             this.label5.Text = "Address";
             // 
+            // buildingcomboBox
+            // 
+            this.buildingcomboBox.FormattingEnabled = true;
+            this.buildingcomboBox.Location = new System.Drawing.Point(46, 315);
+            this.buildingcomboBox.Name = "buildingcomboBox";
+            this.buildingcomboBox.Size = new System.Drawing.Size(147, 24);
+            this.buildingcomboBox.TabIndex = 4;
+            // 
+            // addresscomboBox
+            // 
+            this.addresscomboBox.FormattingEnabled = true;
+            this.addresscomboBox.Location = new System.Drawing.Point(46, 402);
+            this.addresscomboBox.Name = "addresscomboBox";
+            this.addresscomboBox.Size = new System.Drawing.Size(331, 24);
+            this.addresscomboBox.TabIndex = 5;
+            // 
+            // allocatedHourstextBox
+            // 
+            this.allocatedHourstextBox.Location = new System.Drawing.Point(49, 240);
+            this.allocatedHourstextBox.Name = "allocatedHourstextBox";
+            this.allocatedHourstextBox.Size = new System.Drawing.Size(150, 22);
+            this.allocatedHourstextBox.TabIndex = 3;
+            // 
             // EditProjectsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.allocatedHourstextBox);
+            this.Controls.Add(this.addresscomboBox);
+            this.Controls.Add(this.buildingcomboBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.budgetTextbox);
             this.Controls.Add(this.feedbackLabel);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.label3);
@@ -154,9 +185,12 @@
         private System.Windows.Forms.TextBox nameTextbox;
         private System.Windows.Forms.Button SaveButtom;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox budgetTextbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox buildingcomboBox;
+        private System.Windows.Forms.ComboBox addresscomboBox;
+        private System.Windows.Forms.TextBox allocatedHourstextBox;
     }
 }

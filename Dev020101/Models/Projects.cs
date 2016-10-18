@@ -11,9 +11,16 @@ namespace Dev020101.Models
     public class Projects : MySqlModel<Projects>
     {
         public int project_id;
+        public string name;
         public float budget;
+        public int allocatedHours;
         public string buildingName;
-        public int country_id;
-        public string postalCode;
+        public int address_id;
+
+        // Relations
+        public Addresses address()
+        {
+            return new Addresses().hasOne(this, "address_id", "address_id");
+        }
     }
 }

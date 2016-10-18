@@ -158,12 +158,14 @@
             this.viewProjectsToolStripMenuItem.Name = "viewProjectsToolStripMenuItem";
             this.viewProjectsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.viewProjectsToolStripMenuItem.Text = "View projects";
+            this.viewProjectsToolStripMenuItem.Click += new System.EventHandler(this.viewProjectsToolStripMenuItem_Click);
             // 
             // addProjectsToolStripMenuItem
             // 
             this.addProjectsToolStripMenuItem.Name = "addProjectsToolStripMenuItem";
             this.addProjectsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.addProjectsToolStripMenuItem.Text = "Add projects";
+            this.addProjectsToolStripMenuItem.Click += new System.EventHandler(this.addProjectsToolStripMenuItem_Click);
             // 
             // failingProjectsToolStripMenuItem
             // 
@@ -253,14 +255,14 @@
             // viewStreetsToolStripMenuItem
             // 
             this.viewStreetsToolStripMenuItem.Name = "viewStreetsToolStripMenuItem";
-            this.viewStreetsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.viewStreetsToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.viewStreetsToolStripMenuItem.Text = "View streets";
             this.viewStreetsToolStripMenuItem.Click += new System.EventHandler(this.viewStreetsToolStripMenuItem_Click);
             // 
             // addStreetToolStripMenuItem
             // 
             this.addStreetToolStripMenuItem.Name = "addStreetToolStripMenuItem";
-            this.addStreetToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.addStreetToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.addStreetToolStripMenuItem.Text = "Add streets";
             this.addStreetToolStripMenuItem.Click += new System.EventHandler(this.addStreetsToolStripMenuItem_Click);
             // 

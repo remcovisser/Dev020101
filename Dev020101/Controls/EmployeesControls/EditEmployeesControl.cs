@@ -23,7 +23,7 @@ namespace Dev020101.Controls.EmployeesControls
 
             // Fill the field with data
             currentEmployee = selectedEmployee;
-            bsnTextbox.Text = selectedEmployee.bsn.ToString();
+            bsnTextbox.Text = selectedEmployee.bsn;
             firstnameTextbox.Text = selectedEmployee.firstName;
             lastnameTextbox.Text = selectedEmployee.lastName;
             // Add headquarters to the combobox

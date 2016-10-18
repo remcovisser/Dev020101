@@ -13,8 +13,8 @@ namespace Dev020101.Models
         public int address_id;
         public string number;
         public string postalCode;
-        public int street_name;
-        public int country_name;
-        public int city_name; 
+        public string city_name;
+        public string country_name;
+        public string street_name;
     }
 }

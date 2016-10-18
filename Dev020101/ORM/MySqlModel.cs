@@ -139,15 +139,21 @@ namespace Dev020101.ORM
             return this.get();
         }
 
-        public T hasOne<U>(U parent, string customField = null)
+        public T hasOne<U>(U parent, string leftTableField = null, string rightTableField = null)
         {
-            if (customField == null)
+            if (leftTableField == null)
             {
                 string parentName = this.GetType().Name.ToLower();
-                customField = parentName.Remove(parentName.Length - 1) + "_id";
+                leftTableField = parentName.Remove(parentName.Length - 1) + "_id";
             }
 
-            query += " where id = " + parent.GetType().GetField(customField).GetValue(parent);
+            if (rightTableField == null)
+            {
+                string parentName = this.GetType().Name.ToLower();
+                rightTableField = parentName.Remove(parentName.Length - 1) + "_id";
+            }
+
+            query += " where " + rightTableField + " = " + parent.GetType().GetField(leftTableField).GetValue(parent);
 
             return this.grab();
         }
