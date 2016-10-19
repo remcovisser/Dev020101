@@ -97,12 +97,13 @@ namespace Dev020101.Controls.ProjectsControls
             feedbackLabel.ForeColor = System.Drawing.Color.Green;
         }
 
-        // Delete the current user
+        // Delete the current project including its address
         private void deleteButton_Click(object sender, EventArgs e)
         {
             bool deleteFeedback = new Projects().find(currentProject.project_id, "project_id").grab().delete();
+            bool deleteAddressFeedback = new Addresses().find(currentProject.address_id, "address_id").grab().delete();
 
-            if (deleteFeedback)
+            if (deleteFeedback && deleteAddressFeedback)
             {
                 feedbackLabel.Text = "The project has been deleted";
                 feedbackLabel.ForeColor = System.Drawing.Color.Green;

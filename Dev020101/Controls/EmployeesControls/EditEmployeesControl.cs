@@ -389,7 +389,7 @@ namespace Dev020101.Controls.EmployeesControls
         }
 
 
-        // --------------- User positions ----------------------------// 
+        // --------------- User positions and projects ----------------------------// 
         private void savePositions_ButtonClick(object sender, EventArgs e)
         {
             int project_id = Int32.Parse(projectComboBox.SelectedItem.ToString().Split('-').First().Trim(' '));
@@ -400,12 +400,24 @@ namespace Dev020101.Controls.EmployeesControls
                 foreach (object position in PositionsCheckedListBox.CheckedItems)
                 {
                     string position_id = position.ToString().Split('-').First().Trim(' ');
-
-                    EmployeePositions newEmployeePosition = new EmployeePositions();
-                    newEmployeePosition.bsn = currentEmployee.bsn;
-                    newEmployeePosition.project_id = project_id;
-                    newEmployeePosition.position_id = Int32.Parse(position_id);
-                    newEmployeePosition.save();
+                    if (new EmployeePositions().where("bsn", "=", currentEmployee.bsn).and("project_id", "=", project_id).count() == 0)
+                    {
+                        EmployeePositions newEmployeePosition = new EmployeePositions();
+                        newEmployeePosition.bsn = currentEmployee.bsn;
+                        newEmployeePosition.project_id = project_id;
+                        newEmployeePosition.position_id = Int32.Parse(position_id);
+                        newEmployeePosition.hours = float.Parse(positionHoursTextBox.Text);
+                        newEmployeePosition.save();
+                    } 
+                    else
+                    {
+                        EmployeePositions updatedEmployeePosition = new EmployeePositions().where("bsn", "=", currentEmployee.bsn).and("project_id", "=", project_id).grab();
+                        updatedEmployeePosition.bsn = currentEmployee.bsn;
+                        updatedEmployeePosition.project_id = project_id;
+                        updatedEmployeePosition.position_id = Int32.Parse(position_id);
+                        updatedEmployeePosition.hours = float.Parse(positionHoursTextBox.Text);
+                        updatedEmployeePosition.update("employeePositions_id", updatedEmployeePosition.employeePositions_id);
+                    }
 
                     feedbackLabel.Text = "The position on the project has been saved";
                     feedbackLabel.ForeColor = System.Drawing.Color.Green;
@@ -439,6 +451,7 @@ namespace Dev020101.Controls.EmployeesControls
             {
                 // Find the index of the item
                 Positions position = new EmployeePositions().where("bsn", "=", currentEmployee.bsn).and("project_id", "=", project_id).grab().position();
+                positionHoursTextBox.Text = new EmployeePositions().where("bsn", "=", currentEmployee.bsn).and("project_id", "=", project_id).grab().hours.ToString();
                 string itemName = position.position_id + " - " + position.name;
                 int itemIndex = 0;
                 int index = 0;
