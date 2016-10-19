@@ -26,5 +26,10 @@ namespace Dev020101.Models
         {
             return new EmployeeAddresses().hasMany(this, "bsn", "bsn");
         }
+
+        public List<EmployeeDegrees> degrees()
+        {
+            return new EmployeeDegrees().hasMany(this, "bsn", "bsn");
+        }
     }
 }

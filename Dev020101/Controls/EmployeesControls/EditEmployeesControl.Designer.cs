@@ -59,8 +59,19 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.saveAddressButton = new System.Windows.Forms.Button();
+            this.saveDegreeButton = new System.Windows.Forms.Button();
+            this.deleteDegreeButton = new System.Windows.Forms.Button();
+            this.newDegreeButton = new System.Windows.Forms.Button();
+            this.DegreesList = new System.Windows.Forms.ListBox();
+            this.levelComboBox = new System.Windows.Forms.ComboBox();
+            this.schoolComboBox = new System.Windows.Forms.ComboBox();
+            this.courseComboBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveButtom
@@ -328,10 +339,20 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.saveDegreeButton);
+            this.tabPage2.Controls.Add(this.deleteDegreeButton);
+            this.tabPage2.Controls.Add(this.newDegreeButton);
+            this.tabPage2.Controls.Add(this.DegreesList);
+            this.tabPage2.Controls.Add(this.levelComboBox);
+            this.tabPage2.Controls.Add(this.schoolComboBox);
+            this.tabPage2.Controls.Add(this.courseComboBox);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(661, 550);
+            this.tabPage2.Size = new System.Drawing.Size(749, 550);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Degrees";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -356,6 +377,99 @@
             this.saveAddressButton.UseVisualStyleBackColor = true;
             this.saveAddressButton.Click += new System.EventHandler(this.saveAddressButton_Click);
             // 
+            // saveDegreeButton
+            // 
+            this.saveDegreeButton.Location = new System.Drawing.Point(248, 494);
+            this.saveDegreeButton.Name = "saveDegreeButton";
+            this.saveDegreeButton.Size = new System.Drawing.Size(138, 23);
+            this.saveDegreeButton.TabIndex = 71;
+            this.saveDegreeButton.Text = "Save degree";
+            this.saveDegreeButton.UseVisualStyleBackColor = true;
+            this.saveDegreeButton.Click += new System.EventHandler(this.saveDegreeButton_Click);
+            // 
+            // deleteDegreeButton
+            // 
+            this.deleteDegreeButton.Location = new System.Drawing.Point(570, 494);
+            this.deleteDegreeButton.Name = "deleteDegreeButton";
+            this.deleteDegreeButton.Size = new System.Drawing.Size(138, 23);
+            this.deleteDegreeButton.TabIndex = 70;
+            this.deleteDegreeButton.Text = "Delete degree";
+            this.deleteDegreeButton.UseVisualStyleBackColor = true;
+            this.deleteDegreeButton.Visible = false;
+            this.deleteDegreeButton.Click += new System.EventHandler(this.deleteDegreeButton_Click);
+            // 
+            // newDegreeButton
+            // 
+            this.newDegreeButton.Location = new System.Drawing.Point(409, 494);
+            this.newDegreeButton.Name = "newDegreeButton";
+            this.newDegreeButton.Size = new System.Drawing.Size(138, 23);
+            this.newDegreeButton.TabIndex = 69;
+            this.newDegreeButton.Text = "New degree";
+            this.newDegreeButton.UseVisualStyleBackColor = true;
+            this.newDegreeButton.Visible = false;
+            this.newDegreeButton.Click += new System.EventHandler(this.newDegreeButton_Click);
+            // 
+            // DegreesList
+            // 
+            this.DegreesList.FormattingEnabled = true;
+            this.DegreesList.ItemHeight = 16;
+            this.DegreesList.Location = new System.Drawing.Point(248, 63);
+            this.DegreesList.Name = "DegreesList";
+            this.DegreesList.Size = new System.Drawing.Size(460, 388);
+            this.DegreesList.TabIndex = 68;
+            this.DegreesList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.DegreesList_MouseDoubleClick);
+            // 
+            // levelComboBox
+            // 
+            this.levelComboBox.FormattingEnabled = true;
+            this.levelComboBox.Location = new System.Drawing.Point(41, 269);
+            this.levelComboBox.Name = "levelComboBox";
+            this.levelComboBox.Size = new System.Drawing.Size(150, 24);
+            this.levelComboBox.TabIndex = 66;
+            // 
+            // schoolComboBox
+            // 
+            this.schoolComboBox.FormattingEnabled = true;
+            this.schoolComboBox.Location = new System.Drawing.Point(41, 185);
+            this.schoolComboBox.Name = "schoolComboBox";
+            this.schoolComboBox.Size = new System.Drawing.Size(150, 24);
+            this.schoolComboBox.TabIndex = 65;
+            // 
+            // courseComboBox
+            // 
+            this.courseComboBox.FormattingEnabled = true;
+            this.courseComboBox.Location = new System.Drawing.Point(41, 95);
+            this.courseComboBox.Name = "courseComboBox";
+            this.courseComboBox.Size = new System.Drawing.Size(150, 24);
+            this.courseComboBox.TabIndex = 64;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(41, 234);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 17);
+            this.label6.TabIndex = 62;
+            this.label6.Text = "Level";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(41, 152);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(51, 17);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "School";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(41, 62);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 17);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "Course";
+            // 
             // EditEmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,6 +491,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,5 +531,15 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button saveAddressButton;
+        private System.Windows.Forms.Button saveDegreeButton;
+        private System.Windows.Forms.Button deleteDegreeButton;
+        private System.Windows.Forms.Button newDegreeButton;
+        private System.Windows.Forms.ListBox DegreesList;
+        private System.Windows.Forms.ComboBox levelComboBox;
+        private System.Windows.Forms.ComboBox schoolComboBox;
+        private System.Windows.Forms.ComboBox courseComboBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

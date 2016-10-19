@@ -16,6 +16,7 @@ namespace Dev020101.Controls.EmployeesControls
     {
         Employees currentEmployee;
         int currentSelectedAddress;
+        int currentSelectedDegree;
 
         // Load the data in the view
         public EditEmployeesControl(Employees selectedEmployee)
@@ -67,17 +68,37 @@ namespace Dev020101.Controls.EmployeesControls
                 countryComboBox.Items.Insert(x, country.country_name);
                 x++;
             }
-        }
 
-        private void updateAddressesList()
-        {
-            List<string> dataList = new List<string>();
-            foreach (EmployeeAddresses employeeAddress in currentEmployee.addresses())
+            // Add degrees tot he degreesList
+            updateDegreesList();
+
+            // Add courses to the combobox
+            List<Courses> courses = new Courses().get();
+            x = 0;
+            foreach (Courses course in courses)
             {
-                string adress = employeeAddress.address().street().street_name + " " + employeeAddress.address().number + " / " + employeeAddress.address().city().city_name + " / " + employeeAddress.address().country().country_name;
-                dataList.Add(employeeAddress.address_id + " - " + adress);
+                courseComboBox.Items.Insert(x, course.course_name);
+                x++;
             }
-            AddressesList.DataSource = dataList;
+
+            // Add schools to the combobox
+            List<Schools> schools = new Schools().get();
+            x = 0;
+            foreach (Schools school in schools)
+            {
+                schoolComboBox.Items.Insert(x, school.school_name);
+                x++;
+            }
+
+            // Add levels to the combobox
+            List<Levels> levels = new Levels().get();
+            x = 0;
+            foreach (Levels level in levels)
+            {
+                levelComboBox.Items.Insert(x, level.level_name);
+                x++;
+            }
+
         }
 
         // Check if there is an employee with the given BSN
@@ -133,6 +154,29 @@ namespace Dev020101.Controls.EmployeesControls
 
 
         // --------------- User addressess ----------------------------// 
+        // Clear the form
+        private void clearAddressform()
+        {
+            numberTextBox.Text = "";
+            postalcodeTextBox.Text = "";
+            streetComboBox.SelectedIndex = 0;
+            cityComboBox.SelectedIndex = 0;
+            countryComboBox.SelectedIndex = 0;
+            residenceCheckBox.Checked = false;
+        }
+
+        // Update the addressList
+        private void updateAddressesList()
+        {
+            List<string> dataList = new List<string>();
+            foreach (EmployeeAddresses employeeAddress in currentEmployee.addresses())
+            {
+                string adress = employeeAddress.address().street().street_name + " " + employeeAddress.address().number + " / " + employeeAddress.address().city().city_name + " / " + employeeAddress.address().country().country_name;
+                dataList.Add(employeeAddress.address_id + " - " + adress);
+            }
+            AddressesList.DataSource = dataList;
+        }
+
         // Save address clicked
         private void saveAddressButton_Click(object sender, EventArgs e)
         {
@@ -172,17 +216,6 @@ namespace Dev020101.Controls.EmployeesControls
             }
 
             updateAddressesList();
-        }
-
-        // Clear the form
-        private void clearAddressform()
-        {
-            numberTextBox.Text = "";
-            postalcodeTextBox.Text = "";
-            streetComboBox.SelectedIndex = 0;
-            cityComboBox.SelectedIndex = 0;
-            countryComboBox.SelectedIndex = 0;
-            residenceCheckBox.Checked = false;
         }
 
         // New address clicked
@@ -236,7 +269,108 @@ namespace Dev020101.Controls.EmployeesControls
         }
 
 
-        // --------------- User degrees ----------------------------// 
+
+
+        // --------------- User degrees ----------------------------//
+        // Clear the form
+        private void clearDegreeform()
+        {
+            courseComboBox.SelectedIndex = 0;
+            schoolComboBox.SelectedIndex = 0;
+            levelComboBox.SelectedIndex = 0;
+        }
+
+        // Update the degreesList
+        private void updateDegreesList()
+        {
+            List<string> dataList = new List<string>();
+            foreach (EmployeeDegrees employeeDegree in currentEmployee.degrees())
+            {
+                string degree = employeeDegree.degree().course().course_name + " / " + employeeDegree.degree().school().school_name + " / " + employeeDegree.degree().level().level_name;
+                dataList.Add(employeeDegree.degree_id + " - " + degree);
+            }
+            DegreesList.DataSource = dataList;
+        }
+
+        private void saveDegreeButton_Click(object sender, EventArgs e)
+        {
+            // Save new Address
+            if (currentSelectedDegree == 0)
+            {
+                Degrees newDegree = new Degrees();
+                newDegree.course_id = new Courses().find(courseComboBox.Text, "course_name").grab().course_id;
+                newDegree.school_id = new Schools().find(schoolComboBox.Text, "school_name").grab().school_id;
+                newDegree.level_id = new Levels().find(levelComboBox.Text, "level_name").grab().level_id;
+                newDegree.save();
+
+                EmployeeDegrees newEmployeeDegree = new EmployeeDegrees();
+                newEmployeeDegree.degree_id = new Degrees().last("degree_id").grab().degree_id;
+                newEmployeeDegree.bsn = currentEmployee.bsn;
+                newEmployeeDegree.save();
+
+                feedbackLabel.Text = "The degree has been created";
+                feedbackLabel.ForeColor = System.Drawing.Color.Green;
+            }
+            // Update existing address
+            else
+            {
+                Degrees updatedDegree = new Degrees().find(currentSelectedDegree, "degree_id").grab();
+                updatedDegree.course_id = new Courses().find(courseComboBox.Text, "course_name").grab().course_id;
+                updatedDegree.school_id = new Schools().find(schoolComboBox.Text, "school_name").grab().school_id;
+                updatedDegree.level_id = new Levels().find(levelComboBox.Text, "level_name").grab().level_id;
+                updatedDegree.update("degree_id", currentSelectedDegree);
+
+                feedbackLabel.Text = "The degree has been updated";
+                feedbackLabel.ForeColor = System.Drawing.Color.Green;
+            }
+
+            updateDegreesList();
+        }
+
+        private void newDegreeButton_Click(object sender, EventArgs e)
+        {
+            currentSelectedDegree = 0;
+            saveDegreeButton.Text = "Save degree";
+            deleteDegreeButton.Visible = false;
+
+            // Clear the form
+            clearDegreeform();
+        }
+
+        private void deleteDegreeButton_Click(object sender, EventArgs e)
+        {
+            // Delete the employeeDegree
+            new EmployeeDegrees().find(currentSelectedDegree, "degree_id").grab().delete();
+            // Delete the degree
+            new Degrees().find(currentSelectedDegree, "degree_id").grab().delete();
+
+            currentSelectedDegree = 0;
+            clearDegreeform();
+            updateDegreesList();
+            deleteDegreeButton.Visible = false;
+
+            feedbackLabel.Text = "The degree has been deleted";
+            feedbackLabel.ForeColor = System.Drawing.Color.Green;
+        }
+
+        private void DegreesList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = this.DegreesList.IndexFromPoint(e.Location);
+            if (DegreesList.SelectedItem != null)
+            {
+                string degree_id = DegreesList.SelectedItem.ToString().Split('-').First().Trim(' ');
+                currentSelectedDegree = Int32.Parse(degree_id);
+                newDegreeButton.Visible = true;
+                deleteDegreeButton.Visible = true;
+                Degrees selectedDegree = new Degrees().find(degree_id, "degree_id").grab();
+
+                courseComboBox.Text = selectedDegree.course().course_name;
+                schoolComboBox.Text = selectedDegree.school().school_name;
+                levelComboBox.Text = selectedDegree.level().level_name;
+
+                saveAddressButton.Text = "Update degree";
+            }
+        }
 
 
         // --------------- User positions ----------------------------// 

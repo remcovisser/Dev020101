@@ -11,7 +11,14 @@ namespace Dev020101.Models
 {
     public class EmployeeDegrees : MySqlModel<EmployeeDegrees>
     {
-        public int degree_id;
+        public int employeeDegrees_id;
         public string bsn;
+        public int degree_id;
+
+        // Relations
+        public Degrees degree()
+        {
+            return new Degrees().hasOne(this, "degree_id", "degree_id");
+        }
     }
 }

@@ -277,6 +277,7 @@
     <Compile Include="Models\Cities.cs" />
     <Compile Include="Models\Countries.cs" />
     <Compile Include="Models\Courses.cs" />
+    <Compile Include="Models\Degrees.cs" />
     <Compile Include="Models\EmployeeAddresses.cs" />
     <Compile Include="Models\EmployeeDegrees.cs" />
     <Compile Include="Models\EmployeePositions.cs" />
