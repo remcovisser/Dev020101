@@ -39,20 +39,28 @@
             this.feedbackLabel = new System.Windows.Forms.Label();
             this.headquartersComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numberTextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.streetComboBox = new System.Windows.Forms.ComboBox();
-            this.cityComboBox = new System.Windows.Forms.ComboBox();
-            this.countryComboBox = new System.Windows.Forms.ComboBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.deleteAddressButton = new System.Windows.Forms.Button();
+            this.newAddressButton = new System.Windows.Forms.Button();
+            this.AddressesList = new System.Windows.Forms.ListBox();
             this.residenceCheckBox = new System.Windows.Forms.CheckBox();
-            this.AddressList = new System.Windows.Forms.ListBox();
-            this.newAddressbutton = new System.Windows.Forms.Button();
+            this.countryComboBox = new System.Windows.Forms.ComboBox();
+            this.cityComboBox = new System.Windows.Forms.ComboBox();
+            this.streetComboBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.postalcodeTextBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.numberTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.saveAddressButton = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // SaveButtom
@@ -148,146 +156,211 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Headquarters";
             // 
-            // label5
+            // tabControl1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(452, 40);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Number";
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(423, 71);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(757, 579);
+            this.tabControl1.TabIndex = 40;
             // 
-            // numberTextBox
+            // tabPage1
             // 
-            this.numberTextBox.Location = new System.Drawing.Point(452, 73);
-            this.numberTextBox.Name = "numberTextBox";
-            this.numberTextBox.Size = new System.Drawing.Size(150, 22);
-            this.numberTextBox.TabIndex = 18;
+            this.tabPage1.Controls.Add(this.saveAddressButton);
+            this.tabPage1.Controls.Add(this.deleteAddressButton);
+            this.tabPage1.Controls.Add(this.newAddressButton);
+            this.tabPage1.Controls.Add(this.AddressesList);
+            this.tabPage1.Controls.Add(this.residenceCheckBox);
+            this.tabPage1.Controls.Add(this.countryComboBox);
+            this.tabPage1.Controls.Add(this.cityComboBox);
+            this.tabPage1.Controls.Add(this.streetComboBox);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.postalcodeTextBox);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.numberTextBox);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(749, 550);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Addresess";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // deleteAddressButton
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(452, 127);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 17);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Postalcode";
+            this.deleteAddressButton.Location = new System.Drawing.Point(580, 495);
+            this.deleteAddressButton.Name = "deleteAddressButton";
+            this.deleteAddressButton.Size = new System.Drawing.Size(138, 23);
+            this.deleteAddressButton.TabIndex = 54;
+            this.deleteAddressButton.Text = "Delete address";
+            this.deleteAddressButton.UseVisualStyleBackColor = true;
+            this.deleteAddressButton.Visible = false;
+            this.deleteAddressButton.Click += new System.EventHandler(this.deleteAddressButton_Click);
             // 
-            // textBox2
+            // newAddressButton
             // 
-            this.textBox2.Location = new System.Drawing.Point(452, 160);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 20;
+            this.newAddressButton.Location = new System.Drawing.Point(419, 495);
+            this.newAddressButton.Name = "newAddressButton";
+            this.newAddressButton.Size = new System.Drawing.Size(138, 23);
+            this.newAddressButton.TabIndex = 53;
+            this.newAddressButton.Text = "New address";
+            this.newAddressButton.UseVisualStyleBackColor = true;
+            this.newAddressButton.Visible = false;
+            this.newAddressButton.Click += new System.EventHandler(this.newAddressButton_Click);
             // 
-            // label7
+            // AddressesList
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(452, 217);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 17);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Street";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(452, 307);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 17);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "City";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(452, 389);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 17);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Country";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(449, 469);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 17);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Residence";
-            // 
-            // streetComboBox
-            // 
-            this.streetComboBox.FormattingEnabled = true;
-            this.streetComboBox.Location = new System.Drawing.Point(452, 250);
-            this.streetComboBox.Name = "streetComboBox";
-            this.streetComboBox.Size = new System.Drawing.Size(150, 24);
-            this.streetComboBox.TabIndex = 30;
-            // 
-            // cityComboBox
-            // 
-            this.cityComboBox.FormattingEnabled = true;
-            this.cityComboBox.Location = new System.Drawing.Point(452, 340);
-            this.cityComboBox.Name = "cityComboBox";
-            this.cityComboBox.Size = new System.Drawing.Size(150, 24);
-            this.cityComboBox.TabIndex = 31;
-            // 
-            // countryComboBox
-            // 
-            this.countryComboBox.FormattingEnabled = true;
-            this.countryComboBox.Location = new System.Drawing.Point(452, 424);
-            this.countryComboBox.Name = "countryComboBox";
-            this.countryComboBox.Size = new System.Drawing.Size(150, 24);
-            this.countryComboBox.TabIndex = 32;
+            this.AddressesList.FormattingEnabled = true;
+            this.AddressesList.ItemHeight = 16;
+            this.AddressesList.Location = new System.Drawing.Point(258, 64);
+            this.AddressesList.Name = "AddressesList";
+            this.AddressesList.Size = new System.Drawing.Size(460, 388);
+            this.AddressesList.TabIndex = 52;
+            this.AddressesList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AddressList_MouseDoubleClick);
             // 
             // residenceCheckBox
             // 
             this.residenceCheckBox.AutoSize = true;
-            this.residenceCheckBox.Location = new System.Drawing.Point(452, 504);
+            this.residenceCheckBox.Location = new System.Drawing.Point(54, 499);
             this.residenceCheckBox.Name = "residenceCheckBox";
             this.residenceCheckBox.Size = new System.Drawing.Size(18, 17);
-            this.residenceCheckBox.TabIndex = 33;
+            this.residenceCheckBox.TabIndex = 51;
             this.residenceCheckBox.UseVisualStyleBackColor = true;
             // 
-            // AddressList
+            // countryComboBox
             // 
-            this.AddressList.FormattingEnabled = true;
-            this.AddressList.ItemHeight = 16;
-            this.AddressList.Location = new System.Drawing.Point(711, 73);
-            this.AddressList.Name = "AddressList";
-            this.AddressList.Size = new System.Drawing.Size(138, 388);
-            this.AddressList.TabIndex = 34;
-            this.AddressList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AddressList_MouseDoubleClick);
+            this.countryComboBox.FormattingEnabled = true;
+            this.countryComboBox.Location = new System.Drawing.Point(54, 419);
+            this.countryComboBox.Name = "countryComboBox";
+            this.countryComboBox.Size = new System.Drawing.Size(150, 24);
+            this.countryComboBox.TabIndex = 50;
             // 
-            // newAddressbutton
+            // cityComboBox
             // 
-            this.newAddressbutton.Location = new System.Drawing.Point(711, 497);
-            this.newAddressbutton.Name = "newAddressbutton";
-            this.newAddressbutton.Size = new System.Drawing.Size(138, 23);
-            this.newAddressbutton.TabIndex = 35;
-            this.newAddressbutton.Text = "New address";
-            this.newAddressbutton.UseVisualStyleBackColor = true;
-            this.newAddressbutton.Visible = false;
-            this.newAddressbutton.Click += new System.EventHandler(this.newAddressButton_Click);
+            this.cityComboBox.FormattingEnabled = true;
+            this.cityComboBox.Location = new System.Drawing.Point(54, 335);
+            this.cityComboBox.Name = "cityComboBox";
+            this.cityComboBox.Size = new System.Drawing.Size(150, 24);
+            this.cityComboBox.TabIndex = 49;
+            // 
+            // streetComboBox
+            // 
+            this.streetComboBox.FormattingEnabled = true;
+            this.streetComboBox.Location = new System.Drawing.Point(54, 245);
+            this.streetComboBox.Name = "streetComboBox";
+            this.streetComboBox.Size = new System.Drawing.Size(150, 24);
+            this.streetComboBox.TabIndex = 48;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(51, 464);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 17);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Residence";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(54, 384);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(57, 17);
+            this.label12.TabIndex = 46;
+            this.label12.Text = "Country";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(54, 302);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(31, 17);
+            this.label13.TabIndex = 45;
+            this.label13.Text = "City";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(54, 212);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 17);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "Street";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(54, 122);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 17);
+            this.label15.TabIndex = 43;
+            this.label15.Text = "Postalcode";
+            // 
+            // postalcodeTextBox
+            // 
+            this.postalcodeTextBox.Location = new System.Drawing.Point(54, 155);
+            this.postalcodeTextBox.Name = "postalcodeTextBox";
+            this.postalcodeTextBox.Size = new System.Drawing.Size(150, 22);
+            this.postalcodeTextBox.TabIndex = 42;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(54, 35);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(58, 17);
+            this.label16.TabIndex = 41;
+            this.label16.Text = "Number";
+            // 
+            // numberTextBox
+            // 
+            this.numberTextBox.Location = new System.Drawing.Point(54, 68);
+            this.numberTextBox.Name = "numberTextBox";
+            this.numberTextBox.Size = new System.Drawing.Size(150, 22);
+            this.numberTextBox.TabIndex = 40;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(661, 550);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Degrees";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(661, 550);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Positions";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // saveAddressButton
+            // 
+            this.saveAddressButton.Location = new System.Drawing.Point(258, 495);
+            this.saveAddressButton.Name = "saveAddressButton";
+            this.saveAddressButton.Size = new System.Drawing.Size(138, 23);
+            this.saveAddressButton.TabIndex = 55;
+            this.saveAddressButton.Text = "Save address";
+            this.saveAddressButton.UseVisualStyleBackColor = true;
+            this.saveAddressButton.Click += new System.EventHandler(this.saveAddressButton_Click);
             // 
             // EditEmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.newAddressbutton);
-            this.Controls.Add(this.AddressList);
-            this.Controls.Add(this.residenceCheckBox);
-            this.Controls.Add(this.countryComboBox);
-            this.Controls.Add(this.cityComboBox);
-            this.Controls.Add(this.streetComboBox);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.numberTextBox);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.headquartersComboBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.feedbackLabel);
@@ -301,6 +374,9 @@
             this.Controls.Add(this.SaveButtom);
             this.Name = "EditEmployeesControl";
             this.Size = new System.Drawing.Size(1262, 740);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,19 +395,25 @@
         private System.Windows.Forms.Label feedbackLabel;
         private System.Windows.Forms.ComboBox headquartersComboBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox numberTextBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox streetComboBox;
-        private System.Windows.Forms.ComboBox cityComboBox;
-        private System.Windows.Forms.ComboBox countryComboBox;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button deleteAddressButton;
+        private System.Windows.Forms.Button newAddressButton;
+        private System.Windows.Forms.ListBox AddressesList;
         private System.Windows.Forms.CheckBox residenceCheckBox;
-        private System.Windows.Forms.ListBox AddressList;
-        private System.Windows.Forms.Button newAddressbutton;
+        private System.Windows.Forms.ComboBox countryComboBox;
+        private System.Windows.Forms.ComboBox cityComboBox;
+        private System.Windows.Forms.ComboBox streetComboBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox postalcodeTextBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox numberTextBox;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button saveAddressButton;
     }
 }

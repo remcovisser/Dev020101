@@ -32,5 +32,10 @@ namespace Dev020101.Models
         {
             return new Streets().hasOne(this, "street_id", "street_id");
         }
+
+        public EmployeeAddresses employeeAddress()
+        {
+            return new EmployeeAddresses().hasOne(this, "address_id", "address_id");
+        }
     }
 }
