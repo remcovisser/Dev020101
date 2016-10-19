@@ -41,8 +41,6 @@
             this.addProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.failingProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addAddressesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.countriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewCountriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCountriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +51,6 @@
             this.viewStreetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addStreetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.degreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewDegreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addDegreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.levelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewLevelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addLevelsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -176,26 +172,12 @@
             // addressesToolStripMenuItem
             // 
             this.addressesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewAddressesToolStripMenuItem,
-            this.addAddressesToolStripMenuItem,
             this.countriesToolStripMenuItem,
             this.citiesToolStripMenuItem,
             this.streetsToolStripMenuItem});
             this.addressesToolStripMenuItem.Name = "addressesToolStripMenuItem";
             this.addressesToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.addressesToolStripMenuItem.Text = "Addresses";
-            // 
-            // viewAddressesToolStripMenuItem
-            // 
-            this.viewAddressesToolStripMenuItem.Name = "viewAddressesToolStripMenuItem";
-            this.viewAddressesToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.viewAddressesToolStripMenuItem.Text = "View addresses";
-            // 
-            // addAddressesToolStripMenuItem
-            // 
-            this.addAddressesToolStripMenuItem.Name = "addAddressesToolStripMenuItem";
-            this.addAddressesToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
-            this.addAddressesToolStripMenuItem.Text = "Add addresses";
             // 
             // countriesToolStripMenuItem
             // 
@@ -269,26 +251,12 @@
             // degreesToolStripMenuItem
             // 
             this.degreesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewDegreesToolStripMenuItem,
-            this.addDegreesToolStripMenuItem,
             this.levelsToolStripMenuItem,
             this.coursesToolStripMenuItem,
             this.schoolsToolStripMenuItem});
             this.degreesToolStripMenuItem.Name = "degreesToolStripMenuItem";
             this.degreesToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.degreesToolStripMenuItem.Text = "Degrees";
-            // 
-            // viewDegreesToolStripMenuItem
-            // 
-            this.viewDegreesToolStripMenuItem.Name = "viewDegreesToolStripMenuItem";
-            this.viewDegreesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
-            this.viewDegreesToolStripMenuItem.Text = "View degrees";
-            // 
-            // addDegreesToolStripMenuItem
-            // 
-            this.addDegreesToolStripMenuItem.Name = "addDegreesToolStripMenuItem";
-            this.addDegreesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
-            this.addDegreesToolStripMenuItem.Text = "Add degrees";
             // 
             // levelsToolStripMenuItem
             // 
@@ -433,8 +401,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewHeadquartersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addHeadquartersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addressesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewAddressesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addAddressesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem countriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewCountriesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addCountriesToolStripMenuItem;
@@ -445,8 +411,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewProjectsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addProjectsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem degreesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewDegreesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addDegreesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem levelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewLevelsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addLevelsToolStripMenuItem;

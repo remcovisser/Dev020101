@@ -11,6 +11,7 @@ namespace Dev020101.Models
 {
     public class EmployeeAddresses : MySqlModel<EmployeeAddresses>
     {
+        public int employeeAddress_id;
         public string bsn;
         public int address_id;
         public int residence;

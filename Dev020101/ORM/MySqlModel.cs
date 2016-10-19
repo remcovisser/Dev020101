@@ -83,6 +83,17 @@ namespace Dev020101.ORM
             return this;
         }
 
+        public MySqlModel<T> last(string field = null)
+        {
+            if(field == null)
+            {
+                field = "id";
+            }
+            query += " order by " + field + " DESC limit 1 ";
+
+            return this;
+        }
+
         public List<Tuple<int, string, FieldInfo>> formatData(MySqlDataReader data)
         {
             FieldInfo[] fields = this.GetType().GetFields();

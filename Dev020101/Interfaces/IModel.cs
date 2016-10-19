@@ -29,6 +29,7 @@ namespace Dev020101.Interfaces
         T select(string fields);
         T find<U>(U value, string field = null);
         T first();
+        T last(string field = null);
         T logicalOperatorBuilder(string logicalOperator, string field, string comparisonOperator, object value);
         T where(string field, string comparisonOperator, object value);
         T and(string field, string comparisonOperator, object value);

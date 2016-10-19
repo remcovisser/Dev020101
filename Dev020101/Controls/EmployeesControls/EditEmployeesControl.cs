@@ -37,15 +37,9 @@ namespace Dev020101.Controls.EmployeesControls
                 x++;
             }
             headquartersComboBox.SelectedText = currentEmployee.buildingName;
-            
+
             // Add addresses to the listbox
-            List<string> dataList = new List<string>();
-            foreach (EmployeeAddresses employeeAddress in currentEmployee.addresses())
-            {
-                string adress = employeeAddress.address().street().street_name + " " + employeeAddress.address().number + " / " + employeeAddress.address().city().city_name + " / " + employeeAddress.address().country().country_name;
-                dataList.Add(employeeAddress.address_id + " - " + adress);
-            }
-            AddressesList.DataSource = dataList;
+            updateAddressesList();
 
             // Add streets to the combobox
             List<Streets> streets = new Streets().get();
@@ -73,6 +67,17 @@ namespace Dev020101.Controls.EmployeesControls
                 countryComboBox.Items.Insert(x, country.country_name);
                 x++;
             }
+        }
+
+        private void updateAddressesList()
+        {
+            List<string> dataList = new List<string>();
+            foreach (EmployeeAddresses employeeAddress in currentEmployee.addresses())
+            {
+                string adress = employeeAddress.address().street().street_name + " " + employeeAddress.address().number + " / " + employeeAddress.address().city().city_name + " / " + employeeAddress.address().country().country_name;
+                dataList.Add(employeeAddress.address_id + " - " + adress);
+            }
+            AddressesList.DataSource = dataList;
         }
 
         // Check if there is an employee with the given BSN
@@ -131,16 +136,47 @@ namespace Dev020101.Controls.EmployeesControls
         // Save address clicked
         private void saveAddressButton_Click(object sender, EventArgs e)
         {
+            // Save new Address
+            if(currentSelectedAddress == 0)
+            {
+                Addresses newAddress = new Addresses();
+                newAddress.number = numberTextBox.Text;
+                newAddress.postalCode = postalcodeTextBox.Text;
+                newAddress.street_id = new Streets().find(streetComboBox.Text, "street_name").grab().street_id;
+                newAddress.city_id = new Cities().find(cityComboBox.Text, "city_name").grab().city_id;
+                newAddress.country_id = new Countries().find(countryComboBox.Text, "country_name").grab().country_id;
+                newAddress.save();
 
+                EmployeeAddresses newEmployeeAddress = new EmployeeAddresses();
+                newEmployeeAddress.bsn = currentEmployee.bsn;
+                newEmployeeAddress.address_id = new Addresses().last("address_id").grab().address_id;
+                newEmployeeAddress.residence = Convert.ToInt32(residenceCheckBox.Checked);
+                newEmployeeAddress.save();
+
+                feedbackLabel.Text = "The address has been created";
+                feedbackLabel.ForeColor = System.Drawing.Color.Green;
+            }
+            // Update existing address
+            else
+            {
+                Addresses updatedAddress = new Addresses().find(currentSelectedAddress, "address_id").grab();
+                updatedAddress.number = numberTextBox.Text;
+                updatedAddress.postalCode = postalcodeTextBox.Text;
+                updatedAddress.street_id = new Streets().find(streetComboBox.Text, "street_name").grab().street_id;
+                updatedAddress.city_id = new Cities().find(cityComboBox.Text, "city_name").grab().city_id;
+                updatedAddress.country_id = new Countries().find(countryComboBox.Text, "country_name").grab().country_id;
+                updatedAddress.update("address_id", currentSelectedAddress);
+
+                feedbackLabel.Text = "The address has been updated";
+                feedbackLabel.ForeColor = System.Drawing.Color.Green;
+            }
+
+            updateAddressesList();
         }
 
-        // New address clicked
-        private void newAddressButton_Click(object sender, EventArgs e)
+        // Clear the form
+        private void clearAddressform()
         {
-            currentSelectedAddress = 0;
-            saveAddressButton.Text = "Save address";
-
-            // Clear the form
             numberTextBox.Text = "";
             postalcodeTextBox.Text = "";
             streetComboBox.SelectedIndex = 0;
@@ -149,10 +185,32 @@ namespace Dev020101.Controls.EmployeesControls
             residenceCheckBox.Checked = false;
         }
 
+        // New address clicked
+        private void newAddressButton_Click(object sender, EventArgs e)
+        {
+            currentSelectedAddress = 0;
+            saveAddressButton.Text = "Save address";
+            deleteAddressButton.Visible = false;
+
+            // Clear the form
+            clearAddressform();
+        }
+
         // Delete address
         private void deleteAddressButton_Click(object sender, EventArgs e)
         {
+            // Delete the employeeAddress
+            new EmployeeAddresses().find(currentSelectedAddress, "address_id").grab().delete();
+            // Delete the address
+            new Addresses().find(currentSelectedAddress, "address_id").grab().delete();
+
             currentSelectedAddress = 0;
+            clearAddressform();
+            updateAddressesList();
+            deleteAddressButton.Visible = false;
+
+            feedbackLabel.Text = "The address has been deleted";
+            feedbackLabel.ForeColor = System.Drawing.Color.Green;
         }
 
         // Adress selected
@@ -164,6 +222,7 @@ namespace Dev020101.Controls.EmployeesControls
                 string address_id = AddressesList.SelectedItem.ToString().Split('-').First().Trim(' ');
                 currentSelectedAddress = Int32.Parse(address_id);
                 newAddressButton.Visible = true;
+                deleteAddressButton.Visible = true;
                 Addresses selectedAddress = new Addresses().find(address_id, "address_id").grab();
 
                 numberTextBox.Text = selectedAddress.number.ToString();
