@@ -379,16 +379,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\assignment1.pdf" />
     <None Include="Resources\DatabaseDesign.asta" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Resources\DatabaseDesign.png" />
-    <Content Include="Resources\DatabaseDesign.sql" />
-  </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Database-sql.sql" />
+    <Content Include="Resources\DatabaseDesign.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
