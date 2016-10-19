@@ -99,6 +99,22 @@ namespace Dev020101.Controls.EmployeesControls
                 x++;
             }
 
+            // Add projects to the combobox
+            List<Projects> projects = new Projects().get();
+            x = 0;
+            foreach (Projects project in projects)
+            {
+                projectComboBox.Items.Insert(x, project.project_id + " - " + project.name);
+                x++;
+            }
+
+            // Add positions to the checkListbox
+            List<Positions> positions = new Positions().get();
+            foreach(Positions position in positions)
+            {
+                PositionsCheckedListBox.Items.Add(position.position_id + " - " + position.name);
+            }
+
         }
 
         // Check if there is an employee with the given BSN
@@ -374,5 +390,82 @@ namespace Dev020101.Controls.EmployeesControls
 
 
         // --------------- User positions ----------------------------// 
+        private void savePositions_ButtonClick(object sender, EventArgs e)
+        {
+            int project_id = Int32.Parse(projectComboBox.SelectedItem.ToString().Split('-').First().Trim(' '));
+
+            // If there is a checked position
+            if (PositionsCheckedListBox.CheckedItems.Count > 0)
+            {
+                foreach (object position in PositionsCheckedListBox.CheckedItems)
+                {
+                    string position_id = position.ToString().Split('-').First().Trim(' ');
+
+                    EmployeePositions newEmployeePosition = new EmployeePositions();
+                    newEmployeePosition.bsn = currentEmployee.bsn;
+                    newEmployeePosition.project_id = project_id;
+                    newEmployeePosition.position_id = Int32.Parse(position_id);
+                    newEmployeePosition.save();
+
+                    feedbackLabel.Text = "The position on the project has been saved";
+                    feedbackLabel.ForeColor = System.Drawing.Color.Green;
+                }
+            }
+            // Remove old position
+            else
+            {
+                new EmployeePositions().where("bsn", "=", currentEmployee.bsn).and("project_id", "=", project_id).grab().delete();
+
+                feedbackLabel.Text = "The position on the project has been removed";
+                feedbackLabel.ForeColor = System.Drawing.Color.Green;
+            }
+        }
+
+        private void Project_changed(object sender, EventArgs e)
+        {
+            string project_id = projectComboBox.SelectedItem.ToString().Split('-').First().Trim(' ');
+            int projectPosition = new EmployeePositions().where("bsn", "=", currentEmployee.bsn).and("project_id", "=", project_id).count();
+
+            // If the employee doesn't have a position in the project
+            if(projectPosition == 0)
+            {
+                // Uncheck all
+                foreach (int item in PositionsCheckedListBox.CheckedIndices)
+                {
+                    PositionsCheckedListBox.SetItemChecked(item, false);
+                }
+            }
+            else
+            {
+                // Find the index of the item
+                Positions position = new EmployeePositions().where("bsn", "=", currentEmployee.bsn).and("project_id", "=", project_id).grab().position();
+                string itemName = position.position_id + " - " + position.name;
+                int itemIndex = 0;
+                int index = 0;
+                foreach (object o in PositionsCheckedListBox.Items)
+                {
+                    if (itemName == o.ToString())
+                    {
+                        itemIndex = index;
+                    }
+
+                    index++;
+                }
+                // Check the position
+                PositionsCheckedListBox.SetItemChecked(itemIndex, true);
+            }
+        }
+
+        // Make sure only 1 position can be checked
+        private void uncheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int x = 0; x < PositionsCheckedListBox.Items.Count; x++)
+            {
+                if (x != e.Index)
+                {
+                    PositionsCheckedListBox.SetItemChecked(x, false);
+                }
+            }
+        }
     }
 }

@@ -9,12 +9,6 @@ namespace Dev020101
     static class Program
     {
         /*
-         * Addresses
-         * Degrees
-         * employee degrees
-         * employee projects
-         * employee addresse
-         * employee positions
          * Failing projects
          * Documentation
          */

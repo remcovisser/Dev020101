@@ -14,5 +14,11 @@ namespace Dev020101.Models
         public string bsn;
         public int position_id;
         public int project_id;
+
+        // Relations
+        public Positions position()
+        {
+            return new Positions().hasOne(this, "position_id", "position_id");
+        }
     }
 }
