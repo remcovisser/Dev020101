@@ -50,24 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\AddressesControls\AddAddressesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\AddressesControls\AddAddressesControl.Designer.cs">
-      <DependentUpon>AddAddressesControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AddressesControls\EditAddressesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\AddressesControls\EditAddressesControl.Designer.cs">
-      <DependentUpon>EditAddressesControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\AddressesControls\ViewAddressesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\AddressesControls\ViewAddressesControl.Designer.cs">
-      <DependentUpon>ViewAddressesControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controls\CitiesControls\AddCitiesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,24 +103,6 @@
     </Compile>
     <Compile Include="Controls\CoursesControls\ViewCoursesControl.Designer.cs">
       <DependentUpon>ViewCoursesControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\DegreesControls\AddDegreesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\DegreesControls\AddDegreesControl.Designer.cs">
-      <DependentUpon>AddDegreesControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\DegreesControls\EditDegreesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\DegreesControls\EditDegreesControl.Designer.cs">
-      <DependentUpon>EditDegreesControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\DegreesControls\ViewDegreesControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controls\DegreesControls\ViewDegreesControl.Designer.cs">
-      <DependentUpon>ViewDegreesControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\EmployeesControls\AddEmployeesControl.cs">
       <SubType>UserControl</SubType>
@@ -294,15 +258,6 @@
     <Compile Include="ORM\MySqlModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\AddressesControls\AddAddressesControl.resx">
-      <DependentUpon>AddAddressesControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\AddressesControls\EditAddressesControl.resx">
-      <DependentUpon>EditAddressesControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\AddressesControls\ViewAddressesControl.resx">
-      <DependentUpon>ViewAddressesControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Controls\CitiesControls\AddCitiesControl.resx">
       <DependentUpon>AddCitiesControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,15 +284,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CoursesControls\ViewCoursesControl.resx">
       <DependentUpon>ViewCoursesControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\DegreesControls\AddDegreesControl.resx">
-      <DependentUpon>AddDegreesControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\DegreesControls\EditDegreesControl.resx">
-      <DependentUpon>EditDegreesControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controls\DegreesControls\ViewDegreesControl.resx">
-      <DependentUpon>ViewDegreesControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\EmployeesControls\AddEmployeesControl.resx">
       <DependentUpon>AddEmployeesControl.cs</DependentUpon>

@@ -69,6 +69,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.ProjectsTab = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -172,6 +173,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.ProjectsTab);
             this.tabControl1.Location = new System.Drawing.Point(423, 71);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -362,7 +364,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(661, 550);
+            this.tabPage3.Size = new System.Drawing.Size(749, 550);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Positions";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -470,6 +472,16 @@
             this.label8.TabIndex = 60;
             this.label8.Text = "Course";
             // 
+            // ProjectsTab
+            // 
+            this.ProjectsTab.Location = new System.Drawing.Point(4, 25);
+            this.ProjectsTab.Name = "ProjectsTab";
+            this.ProjectsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ProjectsTab.Size = new System.Drawing.Size(749, 550);
+            this.ProjectsTab.TabIndex = 3;
+            this.ProjectsTab.Text = "Projects";
+            this.ProjectsTab.UseVisualStyleBackColor = true;
+            // 
             // EditEmployeesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -541,5 +553,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TabPage ProjectsTab;
     }
 }

@@ -36,18 +36,39 @@ namespace Dev020101.Controls.ProjectsControls
             }
             buildingcomboBox.SelectedText = currentProject.buildingName;
 
-            // Add addresses to the combobox
-            List<Addresses> addresses = new Addresses().get();
+            numberTextBox.Text = selectedProject.address().number;
+            postalcodeTextBox.Text = selectedProject.address().postalCode;
+
+            // Add streets to the combobox
+            List<Streets> streets = new Streets().get();
             x = 0;
-            foreach (Addresses addres in addresses)
+            foreach (Streets street in streets)
             {
-                string addressName = addres.address_id + " = " + addres.street().street_name + " " + addres.number;
-                addresscomboBox.Items.Insert(x, addressName);
+                streetComboBox.Items.Insert(x, street.street_name);
                 x++;
             }
-            Addresses projectAdress = currentProject.address();
-            string selectedAddress = projectAdress.address_id + " = " + projectAdress.street_id + " " + projectAdress.number;
-            addresscomboBox.SelectedText = selectedAddress;
+            streetComboBox.SelectedText = currentProject.address().street().street_name;
+
+            // Add cities to the combobox
+            List<Cities> cities = new Cities().get();
+            x = 0;
+            foreach (Cities city in cities)
+            {
+                cityComboBox.Items.Insert(x, city.city_name);
+                x++;
+            }
+            cityComboBox.SelectedText = currentProject.address().city().city_name;
+
+            // Add countries to the combobox
+            List<Countries> countries = new Countries().get();
+            x = 0;
+            foreach (Countries country in countries)
+            {
+                countryComboBox.Items.Insert(x, country.country_name);
+                x++;
+            }
+            countryComboBox.SelectedText = currentProject.address().country().country_name;
+
         }
 
         // Save the current updated user
@@ -58,9 +79,17 @@ namespace Dev020101.Controls.ProjectsControls
             updatedProject.name = nameTextbox.Text;
             updatedProject.budget = float.Parse(budgetTextbox.Text);
             updatedProject.allocatedHours = Int32.Parse(allocatedHourstextBox.Text);
+            updatedProject.address_id = currentProject.address_id;
             updatedProject.buildingName = buildingcomboBox.Text;
-            updatedProject.address_id = Int32.Parse(addresscomboBox.Text.Split('=').First().Trim(' '));
             updatedProject.update("project_id", currentProject.project_id);
+
+            Addresses updatedAddress = new Addresses().find(currentProject.address_id, "address_id").grab();
+            updatedAddress.number = numberTextBox.Text;
+            updatedAddress.postalCode = postalcodeTextBox.Text;
+            updatedAddress.street_id = new Streets().find(streetComboBox.Text, "street_name").grab().street_id;
+            updatedAddress.city_id = new Cities().find(cityComboBox.Text, "city_name").grab().city_id;
+            updatedAddress.country_id = new Countries().find(countryComboBox.Text, "country_name").grab().country_id;
+            updatedAddress.update("address_id", currentProject.address_id);
 
             currentProject = updatedProject;
 

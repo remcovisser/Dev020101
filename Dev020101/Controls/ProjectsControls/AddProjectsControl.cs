@@ -26,26 +26,50 @@ namespace Dev020101.Controls.ProjectsControls
                 buildingcomboBox.Items.Insert(x, headquarter.buildingName);
                 x++;
             }
-
-            List<Addresses> addresses = new Addresses().get();
+            // Add streets to the combobox
+            List<Streets> streets = new Streets().get();
             x = 0;
-            foreach (Addresses addres in addresses)
+            foreach (Streets street in streets)
             {
-                string addressName = addres.address_id + " = " + addres.street().street_name + " " + addres.number + " - " + addres.city().city_name + " - " + addres.country().country_name;
-                addresscomboBox.Items.Insert(x, addressName);
+                streetComboBox.Items.Insert(x, street.street_name);
                 x++;
             }
 
+            // Add cities to the combobox
+            List<Cities> cities = new Cities().get();
+            x = 0;
+            foreach (Cities city in cities)
+            {
+                cityComboBox.Items.Insert(x, city.city_name);
+                x++;
+            }
+
+            // Add countries to the combobox
+            List<Countries> countries = new Countries().get();
+            x = 0;
+            foreach (Countries country in countries)
+            {
+                countryComboBox.Items.Insert(x, country.country_name);
+                x++;
+            }
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
+            Addresses newAddress = new Addresses();
+            newAddress.number = numberTextBox.Text;
+            newAddress.postalCode = postalcodeTextBox.Text;
+            newAddress.street_id = new Streets().find(streetComboBox.Text, "street_name").grab().street_id;
+            newAddress.city_id = new Cities().find(cityComboBox.Text, "city_name").grab().city_id;
+            newAddress.country_id = new Countries().find(countryComboBox.Text, "country_name").grab().country_id;
+            newAddress.save();
+
             Projects newProject = new Projects();
             newProject.name = nameTextbox.Text;
             newProject.budget = float.Parse(budgetTextbox.Text);
             newProject.allocatedHours = Int32.Parse(allocatedHourstextBox.Text);
             newProject.buildingName = buildingcomboBox.Text;
-            newProject.address_id = Int32.Parse(addresscomboBox.Text.Split('=').First().Trim(' '));
+            newProject.address_id = new Addresses().last("address_id").grab().address_id;
             newProject.save();
 
             feedbackLabel.Text = "The project has been created";
