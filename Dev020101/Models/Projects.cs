@@ -22,5 +22,10 @@ namespace Dev020101.Models
         {
             return new Addresses().hasOne(this, "address_id", "address_id");
         }
+
+        public Headquarters headquarter()
+        {
+            return new Headquarters().hasOne(this, "buildingName", "buildingName");
+        }
     }
 }

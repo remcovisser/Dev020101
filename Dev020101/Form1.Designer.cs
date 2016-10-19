@@ -168,6 +168,7 @@
             this.failingProjectsToolStripMenuItem.Name = "failingProjectsToolStripMenuItem";
             this.failingProjectsToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.failingProjectsToolStripMenuItem.Text = "Failing projects";
+            this.failingProjectsToolStripMenuItem.Click += new System.EventHandler(this.failingProjectsToolStripMenuItem_Click);
             // 
             // addressesToolStripMenuItem
             // 
@@ -185,7 +186,7 @@
             this.viewCountriesToolStripMenuItem,
             this.addCountriesToolStripMenuItem});
             this.countriesToolStripMenuItem.Name = "countriesToolStripMenuItem";
-            this.countriesToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.countriesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.countriesToolStripMenuItem.Text = "Countries";
             // 
             // viewCountriesToolStripMenuItem
@@ -208,7 +209,7 @@
             this.viewCitiesToolStripMenuItem,
             this.addCitiesToolStripMenuItem});
             this.citiesToolStripMenuItem.Name = "citiesToolStripMenuItem";
-            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.citiesToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.citiesToolStripMenuItem.Text = "Cities";
             // 
             // viewCitiesToolStripMenuItem
@@ -231,7 +232,7 @@
             this.viewStreetsToolStripMenuItem,
             this.addStreetToolStripMenuItem});
             this.streetsToolStripMenuItem.Name = "streetsToolStripMenuItem";
-            this.streetsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.streetsToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.streetsToolStripMenuItem.Text = "Streets";
             // 
             // viewStreetsToolStripMenuItem
@@ -264,7 +265,7 @@
             this.viewLevelsToolStripMenuItem,
             this.addLevelsToolStripMenuItem});
             this.levelsToolStripMenuItem.Name = "levelsToolStripMenuItem";
-            this.levelsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.levelsToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.levelsToolStripMenuItem.Text = "Levels";
             // 
             // viewLevelsToolStripMenuItem
@@ -287,7 +288,7 @@
             this.viewCoursesToolStripMenuItem,
             this.addCoursesToolStripMenuItem});
             this.coursesToolStripMenuItem.Name = "coursesToolStripMenuItem";
-            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.coursesToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.coursesToolStripMenuItem.Text = "Courses";
             // 
             // viewCoursesToolStripMenuItem
@@ -310,7 +311,7 @@
             this.viewSchoolsToolStripMenuItem,
             this.addSchoolsToolStripMenuItem});
             this.schoolsToolStripMenuItem.Name = "schoolsToolStripMenuItem";
-            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.schoolsToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
             this.schoolsToolStripMenuItem.Text = "Schools";
             // 
             // viewSchoolsToolStripMenuItem

@@ -151,7 +151,7 @@ namespace Dev020101.ORM
                 rightTableField = parentName.Remove(parentName.Length - 1) + "_id";
             }
 
-            query += " where " + rightTableField + " = " + parent.GetType().GetField(leftTableField).GetValue(parent);
+            query += " where " + rightTableField + " = '" +  parent.GetType().GetField(leftTableField).GetValue(parent) + "'";
         }
 
         public List<T> hasMany<U>(U parent, string leftTableField = null, string rightTableField = null)

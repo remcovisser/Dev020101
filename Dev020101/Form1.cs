@@ -152,5 +152,11 @@ namespace Dev020101
         {
             changeControl(new AddProjectsControl());
         }
+
+        // failing projects
+        private void failingProjectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            changeControl(new FailingProjectsControl());
+        }
     }
 }

@@ -188,6 +188,12 @@
     <Compile Include="Controls\ProjectsControls\EditProjectsControl.Designer.cs">
       <DependentUpon>EditProjectsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ProjectsControls\FailingProjectsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProjectsControls\FailingProjectsControl.Designer.cs">
+      <DependentUpon>FailingProjectsControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ProjectsControls\ViewProjectsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ProjectsControls\EditProjectsControl.resx">
       <DependentUpon>EditProjectsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ProjectsControls\FailingProjectsControl.resx">
+      <DependentUpon>FailingProjectsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ProjectsControls\ViewProjectsControl.resx">
       <DependentUpon>ViewProjectsControl.cs</DependentUpon>
