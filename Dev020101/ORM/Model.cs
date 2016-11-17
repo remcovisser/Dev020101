@@ -13,10 +13,17 @@ namespace Dev020101.ORM
         public MySqlConnection MySqlconnection { get; set; }
         public Model()
         {
-            Database database = new Database();
-            if (database.type == "mysql")
+            //Database database = new Database();
+            if (Database.connection == null)
             {
-                this.MySqlconnection = database.connect();
+                Database database = new Database();
+                if (database.type == "mysql") { 
+                    database.connect();
+                    this.MySqlconnection = Database.connection;
+                }
+            } else
+            {
+                this.MySqlconnection = Database.connection;
             }
         }
 

@@ -121,17 +121,15 @@ namespace Dev020101.ORM
         public List<T> get()
         {
             MySqlCommand command = new MySqlCommand(query, connection);
-            connection.ClearAllPoolsAsync();
-         
-            return baseModel.createInstaces(typeof(T), this.formatData(command.ExecuteReader()));
+            List<T> instances = baseModel.createInstaces(typeof(T), this.formatData(command.ExecuteReader()));
+            return instances;
         }
 
         public T grab()
         {
             MySqlCommand command = new MySqlCommand(query, connection);
-            connection.ClearAllPoolsAsync();
-
-            return baseModel.createInstaces(typeof(T), this.formatData(command.ExecuteReader())).First();
+            T instance = baseModel.createInstaces(typeof(T), this.formatData(command.ExecuteReader())).First();
+            return instance;
         }
 
         public MySqlModel<T> groupby(string field)

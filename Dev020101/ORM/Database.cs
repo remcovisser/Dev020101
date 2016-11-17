@@ -11,6 +11,7 @@ namespace Dev020101.ORM
     {
         string server, user, password, database;
         public string type;
+        public static MySqlConnection connection;
 
         // Database settings
         public Database()
@@ -22,7 +23,7 @@ namespace Dev020101.ORM
             this.type = "mysql";
         }
        
-        public MySqlConnection connect()
+        public void connect()
         { 
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.Server = this.server;
@@ -30,10 +31,10 @@ namespace Dev020101.ORM
             builder.Password = this.password;
             builder.Database = this.database;
 
-            MySqlConnection connection = new MySqlConnection(builder.ToString());
-            connection.Open();
+            MySqlConnection con = new MySqlConnection(builder.ToString());
+            con.Open();
 
-            return connection;
+            connection = con;
         }
     }
 }

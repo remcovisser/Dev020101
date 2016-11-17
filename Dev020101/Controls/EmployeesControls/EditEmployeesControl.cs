@@ -276,15 +276,13 @@ namespace Dev020101.Controls.EmployeesControls
 
                 numberTextBox.Text = selectedAddress.number.ToString();
                 postalcodeTextBox.Text = selectedAddress.postalCode;
-                streetComboBox.SelectedText = selectedAddress.street().street_name;
-                cityComboBox.SelectedText = selectedAddress.city().city_name;
-                countryComboBox.SelectedText = selectedAddress.country().country_name;
+                streetComboBox.Text = selectedAddress.street().street_name;
+                cityComboBox.Text = selectedAddress.city().city_name;
+                countryComboBox.Text = selectedAddress.country().country_name;
                 residenceCheckBox.Checked = Convert.ToBoolean(selectedAddress.employeeAddress().residence);
                 saveAddressButton.Text = "Update address";
             }
         }
-
-
 
 
         // --------------- User degrees ----------------------------//
